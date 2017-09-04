@@ -30,36 +30,16 @@ if (isset($_SESSION['user_id'])) {
 }
 */
 
+/* ！！！！！！8/29 夜　表示見るため一旦コメントアウトしてる！！！！！！
+あれ？コメントアウトしたらちゃんとエラーも出るようになった！
+しかしログイン/ログアウトの切り替えはまだ出来てないなぁ。。。
+そしてそのあと、コメントアウトしなくてもエラー出たり、トップ飛ぶようになった、どうして？
+心配なので、発表終わるまではコメントアウトしておこうかな
 if (isLogin($dbh) === TRUE) {
     // header(); // トップページにリダイレクト
     header('Location: top.php');
     // exit();
     exit;
-}
-
-/* moriyama! コメントが多くて見づらくなってきたので整理のため書き直します。
-// moriyama! インデントを整えましょう
-// moriyama! このページは基本的にGETでしかアクセスがないのでメソッドの確認は不要です。
-// ここでは下記のようなif分のほうが適切です。
-if (isset($_GET['err']) === true) {
-// if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-    // エラーメッセージ設定
-    
-    // moriyama! エラーメッセージを格納する配列
-    $err_msg = [];
-    // moriyama! https://beautiful-mothers-sumo.c9users.io/Final_project/login.php?err=err2
-    // というURLのパラメータを取得するには$_GET['err']とします。
-    // err=err1というパラメータをつける
-    if (isset($_GET['err'])) {
-        // 配列にエラーを代入
-        $err_msg[] = 'アクセスエラーです。';
-    } 
-    // err=err2というパラメータをつける
-    if (isset($_GET['err'])) {
-        // moriyama! err1を習って実装してください
-        // 配列にエラーを代入
-        $err_msg[] = 'ログイン失敗。ユーザー名とパスワードをご確認ください。';
-    }
 }
 */
 
@@ -77,12 +57,10 @@ if (isset($_GET['err']) === true) {
     // err が err2の時 
     // 上を参考に実装してみてください
     if ($_GET['err'] === 'err2') {
-        $err_msg[] = 'ログイン失敗。ユーザー名とパスワードをご確認ください。';
+        $err_msg[] = 'ユーザー名またはパスワードが正しくありません';
     }
 }
 
-// isLogin()は()に何も入れなくていいが
-// function isEnableUserId($user_id) { }は入れる
 
 function isLogin($dbh) {
     if (empty($_SESSION['user_id'])) {
@@ -133,25 +111,26 @@ function isLogin($dbh) {
     <link rel="stylesheet" href="sanitize.css">    
     <title>ログイン</title>
 </head>
+
 <body>
     <header>
         <div class="header_margin">
         <div class="header">
         <h1><a href="top.php">Beautiful Mothers</a></h1>
             
-        <form action="logout.php" class="menu">
             <?php
             // ログインしてたらログアウトを表示
             if (isLogin($dbh) === TRUE) { ?>
-                <p><button class="button1" type="submit"><a href="login.php">ログアウト</a></button>
+                <p class="login.menu"><button class="button1" type="submit"><a href="logout.php">ログアウト</a></button></p>
             <?php // ログインしてなければログインを表示
             } else { ?>
-                <p><button class="button1" type="submit"><a href="login.php">ログイン</a></button>
-            <?php } ?>            
-            
+                <p class="login.menu"><button class="button1" type="submit"><a href="login.php">ログイン</a></button></p>
+            <?php } ?>
+            <p class="menu">
                 <a href="favorite.php"><img src="heart.png" class="small_size_menu"></a>
                 <a href="cart.php"><img src="cart.png"  class="small_size_menu"></a>
             </p>
+            
         </div>
             <ul>
                 <li><a href="g.mam.fashion.php">ママファション</a></li>
@@ -166,19 +145,21 @@ function isLogin($dbh) {
     <main>
         
         <section>
-            <h3>会員登録がお済みの方</h3>
+            <div class="icon">
+                <h2>会員登録がお済みの方</h2>
+            </div>
             <form method="post" action="session.php">
                 <div class="box">
                 <div class="inner_box">
                 <?php // <!-- moriyama! $errsを使ってこの辺にエラーメッセージを表示しましょう。--!?>
                 <?php foreach ($err_msg as $value) { ?>
                     <p><?php print $value; ?></p>
-                <?php } ?>  
+                <?php } ?>
                     <label for="name">ユーザー名</label><br>
-                    <input type="name" name="user_name"><br>
+                    <input type="name" name="user_name" size="30">　(半角英数字６文字以上)<br>
                     <br>
                     <label for="password">パスワード</label><br>
-                    <input type="password" name="password"><br>
+                    <input type="password" name="password" size="30">　(半角英数字６文字以上)<br>
                 </div>
                 <p class="box_login_button"><button class="button2" type="submit">ログイン</button></p>
                 </div>
@@ -186,9 +167,11 @@ function isLogin($dbh) {
                 <p class="center_button"><button class="button2" type="submit"><a href="new.members.php">新規会員登録はこちら</a></button></p></a>
             </form>
         </section>
+        
     </main>
     </div>
     </div>
+    
     <footer>
         <p><small>Copyright &copy; Beautiful Mothers All Rights Reserved.</small></p>
     </footer>

@@ -183,6 +183,39 @@ try {
   $err_msg[] = '予期せぬエラーが発生しました。管理者へお問い合わせください。'.$e->getMessage();
 }
 
+// セッション開始
+session_start();
+
+function isLogin($dbh) {
+    if (empty($_SESSION['user_id'])) {
+        return false;
+    }
+    $user_id = $_SESSION['user_id'];
+    // SQL文を作成
+    $sql = 'SELECT
+                t_user.user_id
+            FROM 
+                t_user
+            WHERE
+                user_id = ' . $user_id;
+    try {
+        // SQL文を実行する準備
+        $stmt = $dbh->prepare($sql);
+    } catch(Exception $e) {
+        die('失敗しました。');
+    }
+    // SQLを実行
+    $stmt->execute();
+    // レコードの取得
+    $rows = $stmt->fetchAll();
+                
+    if (empty($rows)) {
+        return false;
+    }     
+    // ここのタイミングではログイン済みと判定
+    return true;
+}
+
 ?>
 
 
@@ -201,10 +234,20 @@ try {
         <div class="header_margin">
         <div class="header">
         <h1><a href="top.php">Beautiful Mothers</a></h1>
-        <p class="menu"><button class="button1" type="submit"><a href="login.php">ログイン</a></button>
-            <a href="favorite.php"><img src="heart.png" class="small_size_menu"></a>
-            <a href="cart.php"><img src="cart.png"  class="small_size_menu"></a>
-        </p>
+        
+            <?php
+            // ログインしてたらログアウトを表示
+            if (isLogin($dbh) === TRUE) { ?>
+                <p class="login.menu"><button class="button1" type="submit"><a href="login.php">ログアウト</a></button></p>
+            <?php // ログインしてなければログインを表示
+            } else { ?>
+                <p class="login.menu"><button class="button1" type="submit"><a href="login.php">ログイン</a></button></p>
+            <?php } ?>
+            <p class="menu">   
+                <a href="favorite.php"><img src="heart.png" class="small_size_menu"></a>
+                <a href="cart.php"><img src="cart.png"  class="small_size_menu"></a>
+            </p>
+        
         </div>
         <ul>
             <li><a href="g.mam.fashion.php">ママファション</a></li>
@@ -217,6 +260,7 @@ try {
     <div class="oya">
     <div class="container">
     <main>
+      
         <?php if (empty($result_msg) !== TRUE) { ?>
             <p><?php print $result_msg; ?></p>
         <?php } ?>
@@ -226,12 +270,13 @@ try {
         
         <section>
             <h2>新規商品追加</h2>
+            <div class="width720px">
             <form method="post" enctype="multipart/form-data">
               <div class="box">
               <div class="inner_box">
                 <p><label>商品名　　<input type="text" name="new_name" value=""></label></p>
-                <p><label>価格　　　<input type="text" name="new_price" value=""></label></p>
-                <p><label>個数　　　<input type="text" name="new_stock" value=""></label></p>
+                <p><label>価格　　　<input type="text" name="new_price" value=""></label> 円　(半角数字)</p>
+                <p><label>個数　　　<input type="text" name="new_stock" value=""></label> 点　(半角数字)</p>
                 <p>公開状態　<select name="new_status"></p>
                     <option value="0">非公開</option>
                     <option value="1">公開</option>
@@ -262,13 +307,14 @@ try {
                     <option value="5">イエロー系</option>
                     <option value="6">グリーン系</option>
                 </select>
-                <p><label>商品説明　<input type="text" name="new_description" value=""></label></p>
+                <p><label>商品説明　<input type="text" name="new_description" value="" size="60px"></label></p>
                 <p>商品画像　<input type="file" name="new_img"></p>
                 <input type="hidden" name="sql_kind" value="insert">
               </div>
-                <p class="add_button"><input type="submit" value="商品を追加する"></p>
+                <p class="add_button"><input type="submit" value="商品を追加する" class="add_radius"></p>
               </div>
             </form>
+            </div>
         </section>
         
         <section>

@@ -1,10 +1,11 @@
 body {
     margin: 0;
+    font-family: "Hiragino Mincho ProN";
 }
 .oya {
     padding-top: 50px;
     padding-bottom: 30px;
-    background-color: #f1f7bb;
+    background-color: #F5DEB3;
 }
 .container {
     width: 960px;
@@ -28,18 +29,25 @@ a {
 }
 h1 {
     font-family: fantasy;
+    flex: 19;
 }
 button.button1 {
     padding: 5px 20px;
     margin: 0 5px;
+    border-radius: 20px;
+    font-family: "Hiragino Mincho ProN";
+}
+.login.menu {
+    flex: 2;
 }
 .menu {
-    margin-left: auto;
+    flex: 2;
 }
 img.small_size_menu {
     width: 35px;
     height: 25px;
     padding: 0 5px;
+    margin-top: 5px;
 }
 ul {
     list-style-type: none;
@@ -63,27 +71,37 @@ footer {
     display: block;
     background-color: #ffffff;
     color: #555555;
-    border: solid 5px #663366;
+    border: double 5px #EF866B;
     width:600px;
     margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 30px;
-    
 }
-h3 {
-    color: #663366;
+h2 {
+    width: 600px;
+    margin: 0 auto;    
+    padding-left: 50px;
+    margin-bottom: 30px;
+}
+.icon {
     width: 600px;
     margin: 0 auto;
+    background-image: url(img.key.png);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 button.button2 {
     background-color: #ffffff;
     color: #555555;
     padding: 5px 80px;
+    border-radius: 5px;
+    font-family: "Hiragino Mincho ProN";
 }
 .center_button {
     width: 600px;
     text-align: center;
     margin: 0 auto;
+    margin-bottom: 110px
 }
 .box_login_button {
     width: 600px;

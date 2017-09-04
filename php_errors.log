@@ -970,3 +970,172 @@ Stack trace:
 [29-Aug-2017 17:50:44 Asia/Tokyo] PHP Stack trace:
 [29-Aug-2017 17:50:44 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/top.php:0
 [29-Aug-2017 17:50:44 Asia/Tokyo] PHP   2. session_start() /home/ubuntu/workspace/Final_project/top.php:33
+[30-Aug-2017 01:13:25 Asia/Tokyo] PHP Notice:  session_start(): ps_files_cleanup_dir: opendir(/var/lib/php5) failed: Permission denied (13) in /home/ubuntu/workspace/Final_project/favorite.php on line 31
+[30-Aug-2017 01:13:25 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 01:13:25 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/favorite.php:0
+[30-Aug-2017 01:13:25 Asia/Tokyo] PHP   2. session_start() /home/ubuntu/workspace/Final_project/favorite.php:31
+[30-Aug-2017 10:56:43 Asia/Tokyo] PHP Notice:  Undefined index: amount in /home/ubuntu/workspace/Final_project/cart.php on line 222
+[30-Aug-2017 10:56:43 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 10:56:43 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[30-Aug-2017 10:56:43 Asia/Tokyo] PHP Notice:  Undefined index: amount in /home/ubuntu/workspace/Final_project/cart.php on line 222
+[30-Aug-2017 10:56:43 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 10:56:43 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[30-Aug-2017 10:57:23 Asia/Tokyo] PHP Notice:  Undefined index: amount in /home/ubuntu/workspace/Final_project/cart.php on line 223
+[30-Aug-2017 10:57:23 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 10:57:23 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[30-Aug-2017 10:57:23 Asia/Tokyo] PHP Notice:  Undefined index: amount in /home/ubuntu/workspace/Final_project/cart.php on line 223
+[30-Aug-2017 10:57:23 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 10:57:23 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[30-Aug-2017 10:57:25 Asia/Tokyo] PHP Notice:  Undefined index: amount in /home/ubuntu/workspace/Final_project/cart.php on line 223
+[30-Aug-2017 10:57:25 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 10:57:25 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[30-Aug-2017 10:57:25 Asia/Tokyo] PHP Notice:  Undefined index: amount in /home/ubuntu/workspace/Final_project/cart.php on line 223
+[30-Aug-2017 10:57:25 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 10:57:25 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[30-Aug-2017 11:04:04 Asia/Tokyo] PHP Notice:  Undefined index: item_id in /home/ubuntu/workspace/Final_project/cart.php on line 131
+[30-Aug-2017 11:04:04 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 11:04:04 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[30-Aug-2017 11:04:04 Asia/Tokyo] PHP Notice:  Undefined index: item_id in /home/ubuntu/workspace/Final_project/cart.php on line 131
+[30-Aug-2017 11:04:04 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 11:04:04 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[30-Aug-2017 11:05:37 Asia/Tokyo] PHP Notice:  Undefined index: item_id in /home/ubuntu/workspace/Final_project/cart.php on line 131
+[30-Aug-2017 11:05:37 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 11:05:37 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[30-Aug-2017 11:05:37 Asia/Tokyo] PHP Notice:  Undefined index: item_id in /home/ubuntu/workspace/Final_project/cart.php on line 131
+[30-Aug-2017 11:05:37 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 11:05:37 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[30-Aug-2017 11:08:43 Asia/Tokyo] PHP Notice:  Undefined index: item_id in /home/ubuntu/workspace/Final_project/cart.php on line 131
+[30-Aug-2017 11:08:43 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 11:08:43 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[30-Aug-2017 11:08:43 Asia/Tokyo] PHP Notice:  Undefined index: item_id in /home/ubuntu/workspace/Final_project/cart.php on line 131
+[30-Aug-2017 11:08:43 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 11:08:43 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[30-Aug-2017 11:10:40 Asia/Tokyo] PHP Notice:  Undefined index: item_id in /home/ubuntu/workspace/Final_project/cart.php on line 131
+[30-Aug-2017 11:10:40 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 11:10:40 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[30-Aug-2017 11:10:40 Asia/Tokyo] PHP Notice:  Undefined index: item_id in /home/ubuntu/workspace/Final_project/cart.php on line 131
+[30-Aug-2017 11:10:40 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 11:10:40 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[30-Aug-2017 11:11:12 Asia/Tokyo] PHP Notice:  Undefined index: item_id in /home/ubuntu/workspace/Final_project/cart.php on line 131
+[30-Aug-2017 11:11:12 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 11:11:12 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[30-Aug-2017 11:11:12 Asia/Tokyo] PHP Notice:  Undefined index: item_id in /home/ubuntu/workspace/Final_project/cart.php on line 131
+[30-Aug-2017 11:11:12 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 11:11:12 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[30-Aug-2017 11:11:32 Asia/Tokyo] PHP Notice:  Undefined index: item_id in /home/ubuntu/workspace/Final_project/cart.php on line 131
+[30-Aug-2017 11:11:32 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 11:11:32 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[30-Aug-2017 11:11:32 Asia/Tokyo] PHP Notice:  Undefined index: item_id in /home/ubuntu/workspace/Final_project/cart.php on line 131
+[30-Aug-2017 11:11:32 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 11:11:32 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[30-Aug-2017 11:11:44 Asia/Tokyo] PHP Notice:  Undefined index: item_id in /home/ubuntu/workspace/Final_project/cart.php on line 131
+[30-Aug-2017 11:11:44 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 11:11:44 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[30-Aug-2017 11:11:44 Asia/Tokyo] PHP Notice:  Undefined index: item_id in /home/ubuntu/workspace/Final_project/cart.php on line 131
+[30-Aug-2017 11:11:44 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 11:11:44 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[30-Aug-2017 11:12:04 Asia/Tokyo] PHP Notice:  Undefined index: item_id in /home/ubuntu/workspace/Final_project/cart.php on line 131
+[30-Aug-2017 11:12:04 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 11:12:04 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[30-Aug-2017 11:12:04 Asia/Tokyo] PHP Notice:  Undefined index: item_id in /home/ubuntu/workspace/Final_project/cart.php on line 131
+[30-Aug-2017 11:12:04 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 11:12:04 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[30-Aug-2017 11:13:41 Asia/Tokyo] PHP Notice:  Undefined index: item_id in /home/ubuntu/workspace/Final_project/cart.php on line 131
+[30-Aug-2017 11:13:41 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 11:13:41 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[30-Aug-2017 11:13:41 Asia/Tokyo] PHP Notice:  Undefined index: item_id in /home/ubuntu/workspace/Final_project/cart.php on line 131
+[30-Aug-2017 11:13:41 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 11:13:41 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[30-Aug-2017 11:14:12 Asia/Tokyo] PHP Notice:  Undefined index: item_id in /home/ubuntu/workspace/Final_project/cart.php on line 131
+[30-Aug-2017 11:14:12 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 11:14:12 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[30-Aug-2017 11:14:12 Asia/Tokyo] PHP Notice:  Undefined index: item_id in /home/ubuntu/workspace/Final_project/cart.php on line 131
+[30-Aug-2017 11:14:12 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 11:14:12 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[30-Aug-2017 11:14:28 Asia/Tokyo] PHP Notice:  Undefined index: item_id in /home/ubuntu/workspace/Final_project/cart.php on line 131
+[30-Aug-2017 11:14:28 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 11:14:28 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[30-Aug-2017 11:14:28 Asia/Tokyo] PHP Notice:  Undefined index: item_id in /home/ubuntu/workspace/Final_project/cart.php on line 131
+[30-Aug-2017 11:14:28 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 11:14:28 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[30-Aug-2017 11:15:03 Asia/Tokyo] PHP Notice:  Undefined index: item_id in /home/ubuntu/workspace/Final_project/cart.php on line 131
+[30-Aug-2017 11:15:03 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 11:15:03 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[30-Aug-2017 11:15:03 Asia/Tokyo] PHP Notice:  Undefined index: item_id in /home/ubuntu/workspace/Final_project/cart.php on line 131
+[30-Aug-2017 11:15:03 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 11:15:03 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[30-Aug-2017 11:15:29 Asia/Tokyo] PHP Notice:  Undefined index: item_id in /home/ubuntu/workspace/Final_project/cart.php on line 131
+[30-Aug-2017 11:15:29 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 11:15:29 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[30-Aug-2017 11:15:29 Asia/Tokyo] PHP Notice:  Undefined index: item_id in /home/ubuntu/workspace/Final_project/cart.php on line 131
+[30-Aug-2017 11:15:29 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 11:15:29 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[30-Aug-2017 11:17:12 Asia/Tokyo] PHP Notice:  Undefined index: item_id in /home/ubuntu/workspace/Final_project/cart.php on line 131
+[30-Aug-2017 11:17:12 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 11:17:12 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[30-Aug-2017 11:17:12 Asia/Tokyo] PHP Notice:  Undefined index: item_id in /home/ubuntu/workspace/Final_project/cart.php on line 131
+[30-Aug-2017 11:17:12 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 11:17:12 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[30-Aug-2017 11:17:16 Asia/Tokyo] PHP Notice:  Undefined index: item_id in /home/ubuntu/workspace/Final_project/cart.php on line 131
+[30-Aug-2017 11:17:16 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 11:17:16 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[30-Aug-2017 11:17:16 Asia/Tokyo] PHP Notice:  Undefined index: item_id in /home/ubuntu/workspace/Final_project/cart.php on line 131
+[30-Aug-2017 11:17:16 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 11:17:16 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[30-Aug-2017 11:18:19 Asia/Tokyo] PHP Notice:  Undefined index: item_id in /home/ubuntu/workspace/Final_project/cart.php on line 131
+[30-Aug-2017 11:18:19 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 11:18:19 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[30-Aug-2017 11:18:19 Asia/Tokyo] PHP Notice:  Undefined index: item_id in /home/ubuntu/workspace/Final_project/cart.php on line 131
+[30-Aug-2017 11:18:19 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 11:18:19 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[30-Aug-2017 11:22:02 Asia/Tokyo] PHP Notice:  Undefined index: item_id in /home/ubuntu/workspace/Final_project/cart.php on line 131
+[30-Aug-2017 11:22:02 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 11:22:02 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[30-Aug-2017 11:22:02 Asia/Tokyo] PHP Notice:  Undefined index: item_id in /home/ubuntu/workspace/Final_project/cart.php on line 131
+[30-Aug-2017 11:22:02 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 11:22:02 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[30-Aug-2017 11:22:05 Asia/Tokyo] PHP Notice:  Undefined index: item_id in /home/ubuntu/workspace/Final_project/cart.php on line 131
+[30-Aug-2017 11:22:05 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 11:22:05 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[30-Aug-2017 11:22:05 Asia/Tokyo] PHP Notice:  Undefined index: item_id in /home/ubuntu/workspace/Final_project/cart.php on line 131
+[30-Aug-2017 11:22:05 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 11:22:05 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[30-Aug-2017 11:22:31 Asia/Tokyo] PHP Notice:  Undefined index: amount in /home/ubuntu/workspace/Final_project/thank.you.php on line 167
+[30-Aug-2017 11:22:31 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 11:22:31 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/thank.you.php:0
+[30-Aug-2017 11:22:31 Asia/Tokyo] PHP Notice:  Undefined index: amount in /home/ubuntu/workspace/Final_project/thank.you.php on line 167
+[30-Aug-2017 11:22:31 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 11:22:31 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/thank.you.php:0
+[30-Aug-2017 11:22:40 Asia/Tokyo] PHP Notice:  Undefined index: amount in /home/ubuntu/workspace/Final_project/thank.you.php on line 167
+[30-Aug-2017 11:22:40 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 11:22:40 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/thank.you.php:0
+[30-Aug-2017 11:22:40 Asia/Tokyo] PHP Notice:  Undefined index: amount in /home/ubuntu/workspace/Final_project/thank.you.php on line 167
+[30-Aug-2017 11:22:40 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 11:22:40 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/thank.you.php:0
+[30-Aug-2017 11:22:48 Asia/Tokyo] PHP Notice:  Undefined index: item_id in /home/ubuntu/workspace/Final_project/cart.php on line 131
+[30-Aug-2017 11:22:48 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 11:22:48 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[30-Aug-2017 11:22:48 Asia/Tokyo] PHP Notice:  Undefined index: item_id in /home/ubuntu/workspace/Final_project/cart.php on line 131
+[30-Aug-2017 11:22:48 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 11:22:48 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[30-Aug-2017 11:25:09 Asia/Tokyo] PHP Notice:  Undefined index: amount in /home/ubuntu/workspace/Final_project/thank.you.php on line 167
+[30-Aug-2017 11:25:09 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 11:25:09 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/thank.you.php:0
+[30-Aug-2017 11:25:09 Asia/Tokyo] PHP Notice:  Undefined index: amount in /home/ubuntu/workspace/Final_project/thank.you.php on line 167
+[30-Aug-2017 11:25:09 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 11:25:09 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/thank.you.php:0
+[30-Aug-2017 11:48:55 Asia/Tokyo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY
+                created_at DESC' at line 17' in /home/ubuntu/workspace/Final_project/g.maternity.php:175
+Stack trace:
+#0 /home/ubuntu/workspace/Final_project/g.maternity.php(175): PDO->prepare('SELECT?        ...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Final_project/g.maternity.php on line 175
+[30-Aug-2017 12:24:22 Asia/Tokyo] PHP Notice:  Undefined variable: user_id in /home/ubuntu/workspace/Final_project/g.maternity.php on line 142
+[30-Aug-2017 12:24:22 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 12:24:22 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/g.maternity.php:0
+[30-Aug-2017 18:40:27 Asia/Tokyo] PHP Notice:  Undefined variable: user_id in /home/ubuntu/workspace/Final_project/top.php on line 142
+[30-Aug-2017 18:40:27 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 18:40:27 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/top.php:0
+[30-Aug-2017 18:41:19 Asia/Tokyo] PHP Notice:  Undefined variable: user_id in /home/ubuntu/workspace/Final_project/favorite.php on line 96
+[30-Aug-2017 18:41:19 Asia/Tokyo] PHP Stack trace:
+[30-Aug-2017 18:41:19 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/favorite.php:0

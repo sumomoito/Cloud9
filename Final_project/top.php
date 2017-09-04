@@ -201,6 +201,7 @@ function isLogin($dbh) {
     <link rel="stylesheet" href="sanitize.css">    
     <title>トップページ</title>
 </head>
+
 <body>
     <header>
         <div class="header_margin">
@@ -209,7 +210,6 @@ function isLogin($dbh) {
             
             <?php
             // ログインしてたらログアウトを表示
-            // <p class="menu">を閉じれてないから表示おかしくなる、閉じるとアイコンとずれる
             if (isLogin($dbh) === TRUE) { ?>
                 <p class="login.menu"><button class="button1" type="submit"><a href="login.php">ログアウト</a></button></p>
             <?php // ログインしてなければログインを表示
@@ -220,12 +220,12 @@ function isLogin($dbh) {
                 <a href="favorite.php"><img src="heart.png" class="small_size_menu"></a>
                 <a href="cart.php"><img src="cart.png"  class="small_size_menu"></a>
             </p>
-        </form>
+            
         </div>
         <ul>
             <li><a href="g.mam.fashion.php">ママファション</a></li>
             <li><a href="g.baby.kids.php">ベビー・キッズ</a></li>
-            <li><a href="maternity.php">マタニティ・授乳服</a></li>
+            <li><a href="g.maternity.php">マタニティ・授乳服</a></li>
         </ul>
         </div>
     </header>
@@ -254,8 +254,8 @@ function isLogin($dbh) {
 <?php foreach ($data as $value) { ?>
                     <dl class="dl_height">
                         <dt class="dt_margin"><img class="img_size" src="<?php print $img_dir . $value['img']; ?>"></dt>
-                        <dd class="dd_margin"><small><?php print $value['item_name']; ?></small></dd>
-                        <dd class="dd_margin"><?php print $value['price']; ?>円</dd>
+                        <dd class="dd_margin name_font"><?php print $value['item_name']; ?></dd>
+                        <dd class="dd_margin price_font"><?php print $value['price']; ?>円</dd>
                         <dd class="cf_center">
                             <form method="post" enctype="multipart/form-data">
                             <input type="hidden" name="item_id" value="<?php print $value['item_id']; ?>">

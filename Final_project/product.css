@@ -1,10 +1,11 @@
 body {
     margin: 0;
+    font-family: "Hiragino Mincho ProN";
 }
 .oya {
     padding-top: 10px;
     padding-bottom: 30px;
-    background-color: #f1f7bb;
+    background-color: #F5DEB3;
 }
 .container {
     width: 960px;
@@ -28,18 +29,25 @@ a {
 }
 h1 {
     font-family: fantasy;
+    flex: 19;
 }
 button.button1 {
     padding: 5px 20px;
     margin: 0 5px;
+    border-radius: 20px;
+    font-family: "Hiragino Mincho ProN";
+}
+.login.menu {
+    flex: 2;
 }
 .menu {
-    margin-left: auto;
+    flex: 2;
 }
 img.small_size_menu {
     width: 35px;
     height: 25px;
     padding: 0 5px;
+    margin-top: 5px;
 }
 ul {
     list-style-type: none;
@@ -59,31 +67,35 @@ footer {
     color: #663300;
 }
 
+.width720px {
+    width:800px;
+    margin: 0 auto;
+}
 .box {
     display: block;
     background-color: #ffffff;
     color: #555555;
-    border: solid 5px #663366;
-    width:960px;
+    border: double 5px #EF866B;
+    width:800px;
     margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 30px;
+    margin: 20px 0 30px;
 }
 .inner_box {
     padding: 10px 60px;
 }
 .add_button {
-    width: 960px;
+    width: 800px;
     text-align: center;
     margin: 0 auto;
     padding: 0 0 20px;
 }
-h2 {
-    color: #663366;
+.add_radius {
+    border-radius: 5px;
+    font-family: "Hiragino Mincho ProN";
 }
-
-
-
+h2 {
+    text-align: center;
+}
 section {
   margin-bottom: 20px;
 }
@@ -92,14 +104,13 @@ table {
   border-collapse: collapse;
 }
 table, tr, th, td {
-  border: solid 2px;
-  border-color: #663366;
+  border: double 5px;
+  border-color: #EF866B;
   background-color: #ffffff;
   color: #555555;
   padding: 10px;
   text-align: center;
 }
-
 .img_size {
     width: 70px;
 }

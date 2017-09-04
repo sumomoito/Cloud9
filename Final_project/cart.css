@@ -1,10 +1,11 @@
 body {
     margin: 0;
+    font-family: "Hiragino Mincho ProN";
 }
 .oya {
     padding-top: 30px;
     padding-bottom: 30px;
-    background-color: #f1f7bb;
+    background-color: #F5DEB3;
 }
 .container {
     width: 960px;
@@ -28,18 +29,25 @@ a {
 }
 h1 {
     font-family: fantasy;
+    flex: 19;
 }
 button.button1 {
     padding: 5px 20px;
     margin: 0 5px;
+    border-radius: 20px;
+    font-family: "Hiragino Mincho ProN";
+}
+.login.menu {
+    flex: 2;
 }
 .menu {
-    margin-left: auto;
+    flex: 2;
 }
 img.small_size_menu {
     width: 35px;
     height: 25px;
     padding: 0 5px;
+    margin-top: 5px;
 }
 ul {
     list-style-type: none;
@@ -59,6 +67,15 @@ footer {
     color: #663300;
 }
 
+h2 {
+    padding-left: 50px;
+    margin-bottom: 30px;
+}
+.icon {
+    background-image: url(cart.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 section {
   margin-bottom: 20px;
 }
@@ -67,17 +84,15 @@ table {
   border-collapse: collapse;
 }
 table, tr, th, td {
-  border: solid 2px;
-  border-color: #663366;
+  border: double 5px;
+  border-color: #EF866B;
   background-color: #ffffff;
   color: #555555;
   padding: 10px;
   text-align: center;
 }
-
 .img_size {
-    height: 150px;
-    width: 120px;
+    width: 100px;
 }
 .name_width {
     width: 320px;
@@ -86,18 +101,25 @@ table, tr, th, td {
     text-align: right;
     width: 150px;
 }
+.delete_button {
+    border-radius: 5px;
+    font-family: "Hiragino Mincho ProN";
+}
 .top_line {
-    border-top: solid 2px;
-    border-color: #663366;
+    border-top: dashed 2px;
+    border-color: #F43E43;
     padding: 10px;
 }
 h3 {
     text-align: right;
+    color: #F43E43;
 }
 button.button2 {
     background-color: #ffffff;
     color: #555555;
     padding: 5px 80px;
+    border-radius: 5px;
+    font-family: "Hiragino Mincho ProN"; 
 }
 .center_button {
     width: 600px;

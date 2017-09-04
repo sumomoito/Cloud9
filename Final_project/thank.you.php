@@ -22,10 +22,45 @@ die('データベースの接続に失敗しました。');
 }
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $dbh->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+    
+    // セッション開始
+    session_start();
+    
+    function isLogin($dbh) {
+        if (empty($_SESSION['user_id'])) {
+            return false;
+        }
+        $user_id = $_SESSION['user_id'];
+        // SQL文を作成
+        $sql = 'SELECT
+                    t_user.user_id
+                FROM 
+                    t_user
+                WHERE
+                    user_id = ' . $user_id;
+        try {
+            // SQL文を実行する準備
+            $stmt = $dbh->prepare($sql);
+        } catch(Exception $e) {
+            die('失敗しました。');
+        }
+        // SQLを実行
+        $stmt->execute();
+        // レコードの取得
+        $rows = $stmt->fetchAll();
+                    
+        if (empty($rows)) {
+            return false;
+        }     
+        // ここのタイミングではログイン済みと判定
+        return true;
+    }
   
     // SQL文を作成
     $sql = 'SELECT
-                t_cart.item_id,
+                t_cart.cart_id,
+                t_cart.amount,
+                t_item.item_id,
                 t_item.item_name,
                 t_item.price,
                 t_item.stock,
@@ -50,17 +85,19 @@ die('データベースの接続に失敗しました。');
     // 1行ずつ結果を配列で取得します
     $i = 0;
     foreach ($rows as $row) {
-      $data[$i]['item_id']     = htmlspecialchars($row['item_id'],     ENT_QUOTES, 'UTF-8');
-      $data[$i]['item_name']   = htmlspecialchars($row['item_name'],   ENT_QUOTES, 'UTF-8');
-      $data[$i]['price']       = htmlspecialchars($row['price'],       ENT_QUOTES, 'UTF-8');
-      $data[$i]['stock']       = htmlspecialchars($row['stock'],       ENT_QUOTES, 'UTF-8');
-      $data[$i]['status']      = htmlspecialchars($row['status'],      ENT_QUOTES, 'UTF-8');
-      $data[$i]['category']    = htmlspecialchars($row['category'],    ENT_QUOTES, 'UTF-8');
-      $data[$i]['color']       = htmlspecialchars($row['color'],       ENT_QUOTES, 'UTF-8');
-      $data[$i]['description'] = htmlspecialchars($row['description'], ENT_QUOTES, 'UTF-8');
-      $data[$i]['img']         = htmlspecialchars($row['img'],         ENT_QUOTES, 'UTF-8');
-      $data[$i]['created_at']  = htmlspecialchars($row['created_at'],  ENT_QUOTES, 'UTF-8');
-      $i++;
+        $data[$i]['cart_id']     = htmlspecialchars($row['cart_id'],     ENT_QUOTES, 'UTF-8');
+        $data[$i]['amount']      = htmlspecialchars($row['amount'],      ENT_QUOTES, 'UTF-8');
+        $data[$i]['item_id']     = htmlspecialchars($row['item_id'],     ENT_QUOTES, 'UTF-8');
+        $data[$i]['item_name']   = htmlspecialchars($row['item_name'],   ENT_QUOTES, 'UTF-8');
+        $data[$i]['price']       = htmlspecialchars($row['price'],       ENT_QUOTES, 'UTF-8');
+        $data[$i]['stock']       = htmlspecialchars($row['stock'],       ENT_QUOTES, 'UTF-8');
+        $data[$i]['status']      = htmlspecialchars($row['status'],      ENT_QUOTES, 'UTF-8');
+        $data[$i]['category']    = htmlspecialchars($row['category'],    ENT_QUOTES, 'UTF-8');
+        $data[$i]['color']       = htmlspecialchars($row['color'],       ENT_QUOTES, 'UTF-8');
+        $data[$i]['description'] = htmlspecialchars($row['description'], ENT_QUOTES, 'UTF-8');
+        $data[$i]['img']         = htmlspecialchars($row['img'],         ENT_QUOTES, 'UTF-8');
+        $data[$i]['created_at']  = htmlspecialchars($row['created_at'],  ENT_QUOTES, 'UTF-8');
+        $i++;
     }
 
 ?>
@@ -70,7 +107,7 @@ die('データベースの接続に失敗しました。');
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="thank.you.css">
     <link rel="stylesheet" href="sanitize.css">  
     <title>購入完了画面</title>
 </head>
@@ -80,10 +117,20 @@ die('データベースの接続に失敗しました。');
         <div class="header_margin">
         <div class="header">
         <h1><a href="top.php">Beautiful Mothers</a></h1>
-        <p class="menu"><button class="button1" type="submit"><a href="login.php">ログイン</a></button>
-            <a href="favorite.php"><img src="heart.png" class="small_size_menu"></a>
-            <a href="cart.php"><img src="cart.png"  class="small_size_menu"></a>
-        </p>
+        
+            <?php
+            // ログインしてたらログアウトを表示
+            if (isLogin($dbh) === TRUE) { ?>
+                <p class="login.menu"><button class="button1" type="submit"><a href="login.php">ログアウト</a></button></p>
+            <?php // ログインしてなければログインを表示
+            } else { ?>
+                <p class="login.menu"><button class="button1" type="submit"><a href="login.php">ログイン</a></button></p>
+            <?php } ?>
+            <p class="menu">   
+                <a href="favorite.php"><img src="heart.png" class="small_size_menu"></a>
+                <a href="cart.php"><img src="cart.png"  class="small_size_menu"></a>
+            </p>
+
         </div>
         <ul>
             <li><a href="g.mam.fasion.php">ママファション</a></li>
@@ -98,7 +145,9 @@ die('データベースの接続に失敗しました。');
     <main>
         
         <section>
-            <h2>ご購入ありがとうございます</h2>
+            <div class="icon">
+                <h2>ご購入ありがとうございます</h2>
+            </div>
             <table>
                 <tr>
                     <th>商品画像</th>
@@ -115,12 +164,20 @@ die('データベースの接続に失敗しました。');
                 </tr>                    
 <?php } ?>
             </table>
+            
 <?php 
-    $total = 0;
+    $total_amount = 0;
     foreach ($data as $value) { 
-    $total += $value['price']; ?>
-<?php } ?>
-            <h3 class="top_line">合計額　<?php print $total; ?>円</h3>
+    $total_amount += $value['amount']; 
+}
+    $total_price = 0;
+    foreach ($data as $value) { 
+    $total_price += $value['price']; 
+} ?>
+            <h3 class="top_line">点数：<?php print $total_amount; ?>点<br>　　　購入金額：<?php print $total_price; ?>円</h3>
+            <a href="top.php">
+                <p class="center_button"><button class="button2" type="submit">お買い物を続ける</button></p>
+            </a>            
         </section>
         
     </main>

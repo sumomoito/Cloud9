@@ -1,0 +1,158 @@
+body {
+    margin: 0;
+    font-family: "Hiragino Mincho ProN";
+    
+}
+.oya {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #F5DEB3;
+}
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+header {
+    border-bottom: solid 2px #cccccc;
+    color: #663300;
+    
+}
+a {
+    text-decoration: none;
+    color: #663300;
+}
+.header_margin {
+    margin: 0 auto;
+    width: 960px;
+    background-color: #ffffff;
+}
+.header {
+    display: flex;
+}
+h1 {
+    font-family: fantasy;
+    flex: 19;
+}
+button.button1 {
+    padding: 5px 20px;
+    margin: 0 5px;
+    border-radius: 20px;
+    font-family: "Hiragino Mincho ProN";
+}
+.login.menu {
+    flex: 2;
+}
+.menu {
+    flex: 2;
+}
+
+img.small_size_menu {
+    width: 35px;
+    height: 25px;
+    padding: 0 5px;
+    margin-top: 5px;
+}
+ul {
+    list-style-type: none;
+    display: flex;
+}
+li {
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid black;
+}
+li:last-child {
+    border-right: 0;
+}
+footer {
+    border-top: solid 2px #cccccc;
+    text-align: center;
+    color: #663300;
+}
+
+
+.new_item_list {
+    list-style-type: none;
+    padding-left: 0;
+    width: 960px;
+}
+.flex_box_item {
+    display: flex;
+    flex-wrap: wrap;
+}
+.dl_height {
+    height: 300px;
+}
+.dt_margin {
+    margin-bottom: 10px;
+}
+.dd_margin {
+    width: 140px;
+    margin-bottom: 5px;
+    margin: 0 auto;
+}
+.name_font {
+    font-size: small;
+    font-weight: bold;
+}
+.price_font {
+    color: #F43E43;
+}
+img.img_size {
+    height: 190px;
+    width: 160px;
+    padding: 0 5px;
+}
+.cf_button {
+    padding: 5px 30px;
+    margin: 0 0 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    color: #555555;
+    background-color: #ffffff;
+    font-family: "Hiragino Mincho ProN";
+    font-weight: bold;
+}
+.cf_center {
+    width: 140px;
+    margin: 0 auto;
+}
+.cart {
+    background-image: url(cart.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.heart {
+    background-image: url(heart.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.width600px {
+    width:640px;
+    margin: 0 auto;
+}
+.box {
+    display: block;
+    background-color: #ffffff;
+    color: #555555;
+    border: double 5px #EF866B;
+    width:640px;
+    margin: 20px 0 30px;
+    
+}
+button.button2 {
+    background-color: #ffffff;
+    color: #555555;
+    padding: 5px 80px;
+    border-radius: 5px;
+    font-family: "Hiragino Mincho ProN";
+}
+.serch_button {
+    width: 600px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 0 20px;
+}
+.inner_box {
+    padding: 10px 30px;
+}

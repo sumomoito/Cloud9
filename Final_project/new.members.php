@@ -54,6 +54,39 @@ die('データベースの接続に失敗しました。');
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $dbh->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
     
+        // セッション開始
+    session_start();
+    
+    function isLogin($dbh) {
+        if (empty($_SESSION['user_id'])) {
+            return false;
+        }
+        $user_id = $_SESSION['user_id'];
+        // SQL文を作成
+        $sql = 'SELECT
+                    t_user.user_id
+                FROM 
+                    t_user
+                WHERE
+                    user_id = ' . $user_id;
+        try {
+            // SQL文を実行する準備
+            $stmt = $dbh->prepare($sql);
+        } catch(Exception $e) {
+            die('失敗しました。');
+        }
+        // SQLを実行
+        $stmt->execute();
+        // レコードの取得
+        $rows = $stmt->fetchAll();
+                    
+        if (empty($rows)) {
+            return false;
+        }     
+        // ここのタイミングではログイン済みと判定
+        return true;
+    }
+    
     if (count($err_msg) === 0 && $_SERVER['REQUEST_METHOD'] === 'POST') {
     
         if ($sql_new === 'insert') {
@@ -98,10 +131,20 @@ die('データベースの接続に失敗しました。');
         <div class="header_margin">
         <div class="header">
             <h1><a href="top.php">Beautiful Mothers</a></h1>
-            <p class="menu"><button class="button1" type="submit"><a href="login.php">ログイン</a></button>
+            
+            <?php
+            // ログインしてたらログアウトを表示
+            if (isLogin($dbh) === TRUE) { ?>
+                <p class="login.menu"><button class="button1" type="submit"><a href="login.php">ログアウト</a></button></p>
+            <?php // ログインしてなければログインを表示
+            } else { ?>
+                <p class="login.menu"><button class="button1" type="submit"><a href="login.php">ログイン</a></button></p>
+            <?php } ?>
+            <p class="menu">   
                 <a href="favorite.php"><img src="heart.png" class="small_size_menu"></a>
                 <a href="cart.php"><img src="cart.png"  class="small_size_menu"></a>
-            </p>
+            </p>   
+
         </div>
             <ul>
                 <li><a href="g.mam.fashion.php">ママファション</a></li>
@@ -114,26 +157,31 @@ die('データベースの接続に失敗しました。');
     <div class="oya">
     <div class="container">
     <main>
+        
+        <?php if (empty($result_msg) !== TRUE) { ?>
+            <p><?php print $result_msg; ?></p>
+        <?php } ?> 
+        
         <section>
-            <?php if (empty($result_msg) !== TRUE) { ?>
-                <p><?php print $result_msg; ?></p>
-            <?php } ?>  
-            <h3>新規会員登録</h3>
+            <div class="icon">
+                <h2>新規会員登録</h2>
+            </div>
             <form method="post" enctype="multipart/form-data">
                 <div class="box">
                     <?php foreach ($err_msg as $value) { ?>
                         <p><?php print $value; ?></p>
                     <?php } ?>                   
                     <label for="name">ユーザー名</label><br>
-                    <input type="name" name="new_user">　(半角英数字６文字以上)<br>
+                    <input type="name" name="new_user" size="30">　(半角英数字６文字以上)<br>
                     <br>
                     <label for="password">パスワード</label><br>
-                    <input type="password" name="new_password">　(半角英数字６文字以上)<br>
+                    <input type="password" name="new_password" size="30">　(半角英数字６文字以上)<br>
                 </div>
                 <input type="hidden" name="sql_new" value="insert">
                 <p class="center_button"><button class="button2" type="submit">登録する</button></p>
             </form>
         </section>
+        
     </main>
     </div>
     </div>

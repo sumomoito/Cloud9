@@ -1,5 +1,7 @@
 body {
     margin: 0;
+    font-family: "Hiragino Mincho ProN";
+    
 }
 .oya {
     padding-bottom: 30px;
@@ -12,6 +14,7 @@ body {
 header {
     border-bottom: solid 2px #cccccc;
     color: #663300;
+    
 }
 a {
     text-decoration: none;
@@ -33,6 +36,7 @@ button.button1 {
     padding: 5px 20px;
     margin: 0 5px;
     border-radius: 20px;
+    font-family: "Hiragino Mincho ProN";
 }
 .login.menu {
     flex: 2;
@@ -64,6 +68,7 @@ footer {
     text-align: center;
     color: #663300;
 }
+
 
 .img_flex {
     width: 960px;
@@ -100,18 +105,27 @@ h2 {
     margin-bottom: 5px;
     margin: 0 auto;
 }
+.name_font {
+    font-size: small;
+    font-weight: bold;
+}
+.price_font {
+    color: #F43E43;
+}
 img.img_size {
     height: 190px;
     width: 160px;
     padding: 0 5px;
 }
 .cf_button {
-    padding: 5px 35px;
+    padding: 5px 30px;
     margin: 0 0 5px;
     border-radius: 5px;
-    font-size: 5px;
+    font-size: 12px;
     color: #555555;
     background-color: #ffffff;
+    font-family: "Hiragino Mincho ProN";
+    font-weight: bold;
 }
 .cf_center {
     width: 140px;
