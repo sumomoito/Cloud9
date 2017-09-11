@@ -1139,3 +1139,4 @@ Stack trace:
 [30-Aug-2017 18:41:19 Asia/Tokyo] PHP Notice:  Undefined variable: user_id in /home/ubuntu/workspace/Final_project/favorite.php on line 96
 [30-Aug-2017 18:41:19 Asia/Tokyo] PHP Stack trace:
 [30-Aug-2017 18:41:19 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/favorite.php:0
+[12-Sep-2017 00:01:10 Asia/Tokyo] PHP Fatal error:  Cannot redeclare isLogin() (previously declared in /home/ubuntu/workspace/Final_project/login.php:65) in /home/ubuntu/workspace/Final_project/login.php on line 127

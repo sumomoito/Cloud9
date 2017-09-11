@@ -19,6 +19,8 @@ $err_msg      = [];
 $amount       = 1;
 $user_id      = 1;
 
+// セッション開始
+session_start();
 
 try {
     // データベースに接続
@@ -29,8 +31,6 @@ die('データベースの接続に失敗しました。');
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $dbh->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
 
-// セッション開始
-session_start();
 
 function isLogin($dbh) {
     if (empty($_SESSION['user_id'])) {

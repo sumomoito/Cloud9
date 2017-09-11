@@ -101,6 +101,22 @@ die('データベースの接続に失敗しました。');
                 $stmt->bindValue(5, $now_date, PDO::PARAM_STR);
                 // SQLを実行
                 $stmt->execute();
+                
+                // SQL文を作成
+                $sql = 'DELETE
+                        FROM
+                            t_favorite
+                        WHERE
+                            item_id = ' . $item_id;
+                            
+                try {
+                    // SQL文を実行する準備
+                    $stmt = $dbh->prepare($sql);
+                } catch(Exception $e) {
+                    die('失敗しました。');
+                }
+                // SQLを実行
+                $stmt->execute();                
                     
                 $result_msg = 'カートに追加しました';
             }
@@ -249,6 +265,8 @@ die('データベースの接続に失敗しました。');
                                 <input type="hidden" name="item_id" value="<?php print $value['item_id']; ?>">
                                 <input type="hidden" name="sql_kind" value="insert">
                                 <input type="submit" value="カートに追加" class="cf_button cart">
+                            </form>
+                            <form method="post">
                                 <input type="hidden" name="item_id" value="<?php print $value['item_id']; ?>">
                                 <input type="hidden" name="sql_delete" value="delete">
                                 <input type="submit" value="削除" class="delete_button">
