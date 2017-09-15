@@ -12,7 +12,6 @@ $result_msg = '';
 $data       = [];
 $err_msg    = [];
 
-//$new_user変数は初期化したあと　$_POST['new_user']をうけとらないといけない気がします
 
 if (isset($_POST['sql_new']) === TRUE) {
     $sql_new = $_POST['sql_new'];  

@@ -1140,3 +1140,31 @@ Stack trace:
 [30-Aug-2017 18:41:19 Asia/Tokyo] PHP Stack trace:
 [30-Aug-2017 18:41:19 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/favorite.php:0
 [12-Sep-2017 00:01:10 Asia/Tokyo] PHP Fatal error:  Cannot redeclare isLogin() (previously declared in /home/ubuntu/workspace/Final_project/login.php:65) in /home/ubuntu/workspace/Final_project/login.php on line 127
+[15-Sep-2017 18:42:12 Asia/Tokyo] PHP Notice:  Undefined variable: sql_serch in /home/ubuntu/workspace/Final_project/serch.php on line 24
+[15-Sep-2017 18:42:12 Asia/Tokyo] PHP Stack trace:
+[15-Sep-2017 18:42:12 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/serch.php:0
+[15-Sep-2017 18:42:12 Asia/Tokyo] PHP Notice:  Undefined variable: category in /home/ubuntu/workspace/Final_project/serch.php on line 65
+[15-Sep-2017 18:42:12 Asia/Tokyo] PHP Stack trace:
+[15-Sep-2017 18:42:12 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/serch.php:0
+[15-Sep-2017 18:42:12 Asia/Tokyo] PHP Notice:  Undefined variable: color in /home/ubuntu/workspace/Final_project/serch.php on line 69
+[15-Sep-2017 18:42:12 Asia/Tokyo] PHP Stack trace:
+[15-Sep-2017 18:42:12 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/serch.php:0
+[15-Sep-2017 18:42:12 Asia/Tokyo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND t_item.category = ? AND t_item.color = ?' at line 18' in /home/ubuntu/workspace/Final_project/serch.php:74
+Stack trace:
+#0 /home/ubuntu/workspace/Final_project/serch.php(74): PDO->prepare('SELECT?        ...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Final_project/serch.php on line 74
+[15-Sep-2017 18:45:19 Asia/Tokyo] PHP Notice:  Undefined variable: category in /home/ubuntu/workspace/Final_project/serch.php on line 75
+[15-Sep-2017 18:45:19 Asia/Tokyo] PHP Stack trace:
+[15-Sep-2017 18:45:19 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/serch.php:0
+[15-Sep-2017 18:45:19 Asia/Tokyo] PHP Notice:  Undefined variable: color in /home/ubuntu/workspace/Final_project/serch.php on line 79
+[15-Sep-2017 18:45:19 Asia/Tokyo] PHP Stack trace:
+[15-Sep-2017 18:45:19 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/serch.php:0
+[15-Sep-2017 18:45:19 Asia/Tokyo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND t_item.category = ? AND t_item.color = ?' at line 18' in /home/ubuntu/workspace/Final_project/serch.php:84
+Stack trace:
+#0 /home/ubuntu/workspace/Final_project/serch.php(84): PDO->prepare('SELECT?        ...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Final_project/serch.php on line 84
+[15-Sep-2017 18:51:47 Asia/Tokyo] PHP Fatal error:  Call to undefined function isLogin() in /home/ubuntu/workspace/Final_project/serch.php on line 137
+[15-Sep-2017 18:51:47 Asia/Tokyo] PHP Stack trace:
+[15-Sep-2017 18:51:47 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/serch.php:0

@@ -13,6 +13,7 @@ $img_dir = './img/';
 
 $sql_kind     = '';
 $sql_favorite = '';
+$sql_category = '';
 $result_msg   = '';
 $data         = [];
 $err_msg      = [];
@@ -149,7 +150,6 @@ function isLogin($dbh) {
                 $result_msg = 'お気に入りに追加しました';
             }
         }
-        
     }
     
     // SQL文を作成（新着順にt_itemに登録した商品を全部呼び出してる）
@@ -239,10 +239,10 @@ function isLogin($dbh) {
     <main>
         
         <section class="width600px">
-            <form action="#">
+            <form method="post" action = "serch.php" enctype="multipart/form-data">
                 <div class="box">
                 <div class="inner_box">
-                    <p>カテゴリ　　<select name="pref"></p>
+                    <p>カテゴリ　　<select name="category"></p>
                         <option value="">選択してください</option>
                         <option value="0">トップス</option>
                         <option value="1">アウター</option>
@@ -252,8 +252,8 @@ function isLogin($dbh) {
                         <option value="5">インナー</option>
                         <option value="6">その他</option>
                     </select>
-                    <p><label>　価格　　　<input type="text" name="new_price" value=""></label>円　<label>〜　<input type="text" name="new_price" value=""></label>円</p>
-                    <p>カラー別　　<select name="pref"></p>
+                    <p><label>　価格　　　<input type="text" name="min_price" value=""></label>円　<label>〜　<input type="text" name="max_price" value=""></label>円</p>
+                    <p>カラー別　　<select name="color"></p>
                         <option value="">選択してください</option>
                         <option value="0">ホワイト系</option>
                         <option value="1">ブラック系</option>
@@ -264,6 +264,7 @@ function isLogin($dbh) {
                         <option value="6">グリーン系</option>
                     </select>
                 </div>
+                <input type="hidden" name="sql_serch" value="fashion_serch">
                 <p class="serch_button"><button class="button2" type="submit">検索する</button></p>
             </form>
         </section>

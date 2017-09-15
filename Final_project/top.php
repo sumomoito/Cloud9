@@ -137,7 +137,7 @@ function isLogin($dbh) {
                     die('失敗しました。');
                 }
     
-                // point! $user_id はsessionから, $item_id, の値をフォームから受け取る処理が必要です
+                
                 // SQL文のプレースホルダに値をバインド
                 $stmt->bindValue(1, $user_id,  PDO::PARAM_INT);
                 $stmt->bindValue(2, $item_id,  PDO::PARAM_INT);
