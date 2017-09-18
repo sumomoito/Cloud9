@@ -239,7 +239,7 @@ function isLogin($dbh) {
     <main>
         
         <section class="width600px">
-            <form method="post" action = "serch.php" enctype="multipart/form-data">
+            <form method="get" action = "serch.php" enctype="multipart/form-data">
                 <div class="box">
                 <div class="inner_box">
                     <p>カテゴリ　　<select name="category"></p>
@@ -252,7 +252,7 @@ function isLogin($dbh) {
                         <option value="5">インナー</option>
                         <option value="6">その他</option>
                     </select>
-                    <p><label>　価格　　　<input type="text" name="min_price" value=""></label>円　<label>〜　<input type="text" name="max_price" value=""></label>円</p>
+<?php // 一旦保留   <p><label>　価格　　　<input type="text" name="min_price" value=""></label>円　<label>〜　<input type="text" name="max_price" value=""></label>円</p> ?>
                     <p>カラー別　　<select name="color"></p>
                         <option value="">選択してください</option>
                         <option value="0">ホワイト系</option>
@@ -264,7 +264,7 @@ function isLogin($dbh) {
                         <option value="6">グリーン系</option>
                     </select>
                 </div>
-                <input type="hidden" name="sql_serch" value="fashion_serch">
+                <input type="hidden" name="sql_serch" value="insert">
                 <p class="serch_button"><button class="button2" type="submit">検索する</button></p>
             </form>
         </section>

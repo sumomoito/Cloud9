@@ -11,7 +11,6 @@ $dsn = 'mysql:dbname='.$dbname.';host='.$host.';charset='.$charset;
 $img_dir = './img/';
 
 $sql_serch     = '';
-$fashion_serch = '';
 $category      = '';
 $color         = '';
 $result_msg    = '';
@@ -32,88 +31,98 @@ die('データベースの接続に失敗しました。');
 // セッション開始
 session_start();
 
-//検索ボタンをおされたら
-if($sql_serch === 'fashion_serch') {
-    // $create_datetime = date('Y-m-d H:i:s');
+// もしリクエストメソッドがGETだったら？？
+if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+
+    //検索処理スタート！！
+    if (isset($_GET['sql_serch']) === TRUE){
+        $sql_serch = $_GET['sql_serch'];
+    }
     
-    if(isset($_POST['category']) === TRUE){
-        $category = preg_replace('/\A[　\s]*|[　\s]*\z/u', '', $_POST['category']);
+    if ($sql_serch === 'insert') {
+        // $categoryを初期化
+        $category = null;
+        if (isset($_GET['category']) === TRUE) {
+            $category = trim($_GET['category']);
+        } 
+        // if (is_numeric($category) === FALSE) {
+            // $err_msg[] = '数値ではありません';
+        // }
+        if (isset($_GET['color']) === TRUE) {
+            $color = trim($_GET['color']);
+        } 
+        // if (is_numeric($color) === FALSE) {
+            // $err_msg[] = '数値ではありません';
+        // }
+        // if (count($err_msg) === 0) {
+            
+            // SQL文を作成（新着順にt_itemに登録した商品を全部呼び出してる）
+            $sql = 'SELECT
+                        t_item.item_id,
+                        t_item.item_name,
+                        t_item.price,
+                        t_item.stock,
+                        t_item.status,
+                        t_item.genre,
+                        t_item.category,
+                        t_item.color,
+                        t_item.description,
+                        t_item.img,
+                        t_item.created_at
+                    FROM 
+                        t_item
+                    WHERE
+                        genre = 0';
+            // 洋服のカテゴリを指定して検索！            
+            if($category !== '') {
+                $sql .= ' AND t_item.category = :category';
+            }
+            // 洋服のカラーを指定して検索！            
+            if($color !== '') {
+                $sql .= ' AND t_item.color = :color';
+            }
+            $sql .= ' ORDER BY
+                        created_at DESC'; // 登録日時の降順(直近を上に)でソート
+                        
+            try {    
+                // SQL文を実行する準備
+                $stmt = $dbh->prepare($sql);
+            } catch(Exception $e) {
+                die('失敗しました。');
+            }
+            
+            // SQL文のプレースホルダに値をバインド
+            if($category !== '') {
+                $stmt->bindValue(':category', $category);
+            }
+            if($color !== '') {
+                $stmt->bindValue(':color', $color);
+            }
+            
+            // SQLを実行
+            $stmt->execute();
+            // レコードの取得
+            $rows = $stmt->fetchAll();
+            // 1行ずつ結果を配列で取得します
+            $i = 0;
+            foreach ($rows as $row) {
+                $data[$i]['item_id']     = htmlspecialchars($row['item_id'],     ENT_QUOTES, 'UTF-8');
+                $data[$i]['item_name']   = htmlspecialchars($row['item_name'],   ENT_QUOTES, 'UTF-8');
+                $data[$i]['price']       = htmlspecialchars($row['price'],       ENT_QUOTES, 'UTF-8');
+                $data[$i]['stock']       = htmlspecialchars($row['stock'],       ENT_QUOTES, 'UTF-8');
+                $data[$i]['status']      = htmlspecialchars($row['status'],      ENT_QUOTES, 'UTF-8');
+                $data[$i]['genre']       = htmlspecialchars($row['genre'],       ENT_QUOTES, 'UTF-8');
+                $data[$i]['category']    = htmlspecialchars($row['category'],    ENT_QUOTES, 'UTF-8');
+                $data[$i]['color']       = htmlspecialchars($row['color'],       ENT_QUOTES, 'UTF-8');
+                $data[$i]['description'] = htmlspecialchars($row['description'], ENT_QUOTES, 'UTF-8');
+                $data[$i]['img']         = htmlspecialchars($row['img'],         ENT_QUOTES, 'UTF-8');
+                $data[$i]['created_at']  = htmlspecialchars($row['created_at'],  ENT_QUOTES, 'UTF-8');
+                $i++;
+            }
+        // }
     }
-/*  金額指定はまだできない
-    if(isset($_POST['min_price']) === TRUE){
-        $min_price = preg_replace('/\A[　\s]*|[　\s]*\z/u', '', $_POST['min_price']);
-    }
-    if(isset($_POST['max_price']) === TRUE){
-        $max_price = preg_replace('/\A[　\s]*|[　\s]*\z/u', '', $_POST['max_price']);
-    }
-*/
-    if(isset($_POST['color']) === TRUE){
-        $color = preg_replace('/\A[　\s]*|[　\s]*\z/u', '', $_POST['color']);
-    }
-    // エラーチェックをここでおこなう
 }
-
-    // SQL文を作成（新着順にt_itemに登録した商品を全部呼び出してる）
-    $sql = 'SELECT
-                t_item.item_id,
-                t_item.item_name,
-                t_item.price,
-                t_item.stock,
-                t_item.status,
-                t_item.genre,
-                t_item.category,
-                t_item.color,
-                t_item.description,
-                t_item.img,
-                t_item.created_at
-            FROM 
-                t_item
-            WHERE
-                genre = 0
-            ORDER BY
-                created_at DESC'; // 登録日時の降順(直近を上に)でソート
-    
-    // 洋服のカテゴリを指定して検索！            
-    if($category !== '') {
-        $sql .= ' AND t_item.category = :category';
-    }
-    // 洋服のカラーを指定して検索！            
-    if($color !== '') {
-        $sql .= ' AND t_item.color = :color';
-    }
-                
-    // SQL文を実行する準備
-    $stmt = $dbh->prepare($sql);
-    
-    // SQL文のプレースホルダに値をバインド
-    if($category !== '') {
-        $stmt->bindValue(':category', $category);
-    }
-    if($color !== '') {
-        $stmt->bindValue(':color', $color);
-    }
-    
-    // SQLを実行
-    $stmt->execute();
-    // レコードの取得
-    $rows = $stmt->fetchAll();
-    // 1行ずつ結果を配列で取得します
-    $i = 0;
-    foreach ($rows as $row) {
-        $data[$i]['item_id']     = htmlspecialchars($row['item_id'],     ENT_QUOTES, 'UTF-8');
-        $data[$i]['item_name']   = htmlspecialchars($row['item_name'],   ENT_QUOTES, 'UTF-8');
-        $data[$i]['price']       = htmlspecialchars($row['price'],       ENT_QUOTES, 'UTF-8');
-        $data[$i]['stock']       = htmlspecialchars($row['stock'],       ENT_QUOTES, 'UTF-8');
-        $data[$i]['status']      = htmlspecialchars($row['status'],      ENT_QUOTES, 'UTF-8');
-        $data[$i]['genre']       = htmlspecialchars($row['genre'],       ENT_QUOTES, 'UTF-8');
-        $data[$i]['category']    = htmlspecialchars($row['category'],    ENT_QUOTES, 'UTF-8');
-        $data[$i]['color']       = htmlspecialchars($row['color'],       ENT_QUOTES, 'UTF-8');
-        $data[$i]['description'] = htmlspecialchars($row['description'], ENT_QUOTES, 'UTF-8');
-        $data[$i]['img']         = htmlspecialchars($row['img'],         ENT_QUOTES, 'UTF-8');
-        $data[$i]['created_at']  = htmlspecialchars($row['created_at'],  ENT_QUOTES, 'UTF-8');
-        $i++;
-    }
-
+        
 ?>
 
 
@@ -159,7 +168,7 @@ if($sql_serch === 'fashion_serch') {
     <main>
         
         <section class="width600px">
-            <form method="post" action = "serch.php" enctype="multipart/form-data">
+            <form method="get" action = "serch.php" enctype="multipart/form-data">
                 <div class="box">
                 <div class="inner_box">
                     <p>カテゴリ　　<select name="category"></p>
@@ -172,7 +181,7 @@ if($sql_serch === 'fashion_serch') {
                         <option value="5">インナー</option>
                         <option value="6">その他</option>
                     </select>
-                    <p><label>　価格　　　<input type="text" name="min_price" value=""></label>円　<label>〜　<input type="text" name="max_price" value=""></label>円</p>
+<?php // 一旦保留   <p><label>　価格　　　<input type="text" name="min_price" value=""></label>円　<label>〜　<input type="text" name="max_price" value=""></label>円</p> ?>
                     <p>カラー別　　<select name="color"></p>
                         <option value="">選択してください</option>
                         <option value="0">ホワイト系</option>
@@ -201,7 +210,7 @@ if($sql_serch === 'fashion_serch') {
                 <li class="flex_box_item">
 <?php foreach ($data as $value) { ?>
                 <?php if(isset($value['genre'])) { ?>
-                    <?php if($value['genre'] === 0) { ?>
+                    <?php // 一旦アウト if($value['genre'] === '0') { ?>
                     <dl class="dl_height">
                         <dt class="dt_margin"><img class="img_size" src="<?php print $img_dir . $value['img']; ?>"></dt>
                         <dd class="dd_margin name_font"><?php print $value['item_name']; ?></dd>
@@ -219,8 +228,8 @@ if($sql_serch === 'fashion_serch') {
                             <input type="submit" value="お気に入りへ" class="cf_button heart"></form>
                         </dd>
                     </dl>
-                    <?php } ?>
-                <?php } ?>    
+                    <?php  } ?>
+                <?php // 一旦アウト } ?>    
 <?php } ?>
                 </li>
             </ul>
@@ -236,8 +245,3 @@ if($sql_serch === 'fashion_serch') {
 
 </body>
 </html>
-
-
-
-
-

@@ -1168,3 +1168,132 @@ Stack trace:
 [15-Sep-2017 18:51:47 Asia/Tokyo] PHP Fatal error:  Call to undefined function isLogin() in /home/ubuntu/workspace/Final_project/serch.php on line 137
 [15-Sep-2017 18:51:47 Asia/Tokyo] PHP Stack trace:
 [15-Sep-2017 18:51:47 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/serch.php:0
+[15-Sep-2017 22:22:13 Asia/Tokyo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND t_item.category = ? AND t_item.color = ?' at line 19' in /home/ubuntu/workspace/Final_project/serch.php:94
+Stack trace:
+#0 /home/ubuntu/workspace/Final_project/serch.php(94): PDO->prepare('SELECT?        ...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Final_project/serch.php on line 94
+[15-Sep-2017 22:22:14 Asia/Tokyo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND t_item.category = ?' at line 19' in /home/ubuntu/workspace/Final_project/serch.php:94
+Stack trace:
+#0 /home/ubuntu/workspace/Final_project/serch.php(94): PDO->prepare('SELECT?        ...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Final_project/serch.php on line 94
+[15-Sep-2017 22:22:15 Asia/Tokyo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND t_item.category = ? AND t_item.color = ?' at line 19' in /home/ubuntu/workspace/Final_project/serch.php:94
+Stack trace:
+#0 /home/ubuntu/workspace/Final_project/serch.php(94): PDO->prepare('SELECT?        ...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Final_project/serch.php on line 94
+[15-Sep-2017 22:22:16 Asia/Tokyo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND t_item.category = ? AND t_item.color = ?' at line 19' in /home/ubuntu/workspace/Final_project/serch.php:94
+Stack trace:
+#0 /home/ubuntu/workspace/Final_project/serch.php(94): PDO->prepare('SELECT?        ...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Final_project/serch.php on line 94
+[15-Sep-2017 22:22:17 Asia/Tokyo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND t_item.category = ?' at line 19' in /home/ubuntu/workspace/Final_project/serch.php:94
+Stack trace:
+#0 /home/ubuntu/workspace/Final_project/serch.php(94): PDO->prepare('SELECT?        ...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Final_project/serch.php on line 94
+[15-Sep-2017 22:22:19 Asia/Tokyo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND t_item.category = ?' at line 19' in /home/ubuntu/workspace/Final_project/serch.php:94
+Stack trace:
+#0 /home/ubuntu/workspace/Final_project/serch.php(94): PDO->prepare('SELECT?        ...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Final_project/serch.php on line 94
+[15-Sep-2017 22:22:20 Asia/Tokyo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND t_item.category = ?' at line 19' in /home/ubuntu/workspace/Final_project/serch.php:94
+Stack trace:
+#0 /home/ubuntu/workspace/Final_project/serch.php(94): PDO->prepare('SELECT?        ...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Final_project/serch.php on line 94
+[15-Sep-2017 22:22:21 Asia/Tokyo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND t_item.category = ? AND t_item.color = ?' at line 19' in /home/ubuntu/workspace/Final_project/serch.php:94
+Stack trace:
+#0 /home/ubuntu/workspace/Final_project/serch.php(94): PDO->prepare('SELECT?        ...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Final_project/serch.php on line 94
+[15-Sep-2017 22:22:22 Asia/Tokyo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND t_item.category = ? AND t_item.color = ?' at line 19' in /home/ubuntu/workspace/Final_project/serch.php:94
+Stack trace:
+#0 /home/ubuntu/workspace/Final_project/serch.php(94): PDO->prepare('SELECT?        ...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Final_project/serch.php on line 94
+[15-Sep-2017 22:22:23 Asia/Tokyo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND t_item.category = ? AND t_item.color = ?' at line 19' in /home/ubuntu/workspace/Final_project/serch.php:94
+Stack trace:
+#0 /home/ubuntu/workspace/Final_project/serch.php(94): PDO->prepare('SELECT?        ...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Final_project/serch.php on line 94
+[15-Sep-2017 22:22:24 Asia/Tokyo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND t_item.category = ? AND t_item.color = ?' at line 19' in /home/ubuntu/workspace/Final_project/serch.php:94
+Stack trace:
+#0 /home/ubuntu/workspace/Final_project/serch.php(94): PDO->prepare('SELECT?        ...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Final_project/serch.php on line 94
+[15-Sep-2017 22:22:26 Asia/Tokyo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND t_item.category = ?' at line 19' in /home/ubuntu/workspace/Final_project/serch.php:94
+Stack trace:
+#0 /home/ubuntu/workspace/Final_project/serch.php(94): PDO->prepare('SELECT?        ...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Final_project/serch.php on line 94
+[15-Sep-2017 22:24:35 Asia/Tokyo] PHP Parse error:  syntax error, unexpected '') {' (T_CONSTANT_ENCAPSED_STRING) in /home/ubuntu/workspace/Final_project/serch.php on line 82
+[15-Sep-2017 22:27:54 Asia/Tokyo] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/ubuntu/workspace/Final_project/serch.php on line 81
+[15-Sep-2017 22:28:42 Asia/Tokyo] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/ubuntu/workspace/Final_project/serch.php on line 81
+[15-Sep-2017 22:28:48 Asia/Tokyo] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/ubuntu/workspace/Final_project/serch.php on line 81
+[15-Sep-2017 22:29:35 Asia/Tokyo] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/ubuntu/workspace/Final_project/serch.php on line 81
+[15-Sep-2017 22:29:38 Asia/Tokyo] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/ubuntu/workspace/Final_project/serch.php on line 81
+[15-Sep-2017 22:30:02 Asia/Tokyo] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/ubuntu/workspace/Final_project/serch.php on line 81
+[15-Sep-2017 23:39:44 Asia/Tokyo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'BY
+                created_at DESC' at line 16' in /home/ubuntu/workspace/Final_project/serch.php:92
+Stack trace:
+#0 /home/ubuntu/workspace/Final_project/serch.php(92): PDO->prepare('SELECT?        ...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Final_project/serch.php on line 92
+[15-Sep-2017 23:40:36 Asia/Tokyo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'BY
+                created_at DESC' at line 16' in /home/ubuntu/workspace/Final_project/serch.php:85
+Stack trace:
+#0 /home/ubuntu/workspace/Final_project/serch.php(85): PDO->prepare('SELECT?        ...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Final_project/serch.php on line 85
+[15-Sep-2017 23:44:19 Asia/Tokyo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY
+                created_at DESC' at line 1' in /home/ubuntu/workspace/Final_project/serch.php:85
+Stack trace:
+#0 /home/ubuntu/workspace/Final_project/serch.php(85): PDO->prepare('ORDER BY?      ...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Final_project/serch.php on line 85
+[15-Sep-2017 23:48:36 Asia/Tokyo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'BY
+                created_at DESC' at line 16' in /home/ubuntu/workspace/Final_project/serch.php:85
+Stack trace:
+#0 /home/ubuntu/workspace/Final_project/serch.php(85): PDO->prepare('SELECT?        ...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Final_project/serch.php on line 85
+[15-Sep-2017 23:50:41 Asia/Tokyo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'BY
+                created_at DESC' at line 16' in /home/ubuntu/workspace/Final_project/serch.php:85
+Stack trace:
+#0 /home/ubuntu/workspace/Final_project/serch.php(85): PDO->prepare('SELECT?        ...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Final_project/serch.php on line 85
+[15-Sep-2017 23:56:48 Asia/Tokyo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY
+                created_at DESC' at line 1' in /home/ubuntu/workspace/Final_project/serch.php:85
+Stack trace:
+#0 /home/ubuntu/workspace/Final_project/serch.php(85): PDO->prepare('ORDER BY?      ...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Final_project/serch.php on line 85
+[15-Sep-2017 23:57:33 Asia/Tokyo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'BY
+                created_at DESC' at line 16' in /home/ubuntu/workspace/Final_project/serch.php:85
+Stack trace:
+#0 /home/ubuntu/workspace/Final_project/serch.php(85): PDO->prepare('SELECT?        ...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Final_project/serch.php on line 85
+[16-Sep-2017 00:42:56 Asia/Tokyo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'BY
+                created_at DESC' at line 16' in /home/ubuntu/workspace/Final_project/serch.php:86
+Stack trace:
+#0 /home/ubuntu/workspace/Final_project/serch.php(86): PDO->prepare('SELECT?        ...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Final_project/serch.php on line 86
+[16-Sep-2017 00:43:29 Asia/Tokyo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'BY
+                created_at DESC' at line 16' in /home/ubuntu/workspace/Final_project/serch.php:86
+Stack trace:
+#0 /home/ubuntu/workspace/Final_project/serch.php(86): PDO->prepare('SELECT?        ...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Final_project/serch.php on line 86
+[17-Sep-2017 11:11:56 Asia/Tokyo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'BY
+                created_at DESC' at line 16' in /home/ubuntu/workspace/Final_project/serch.php:85
+Stack trace:
+#0 /home/ubuntu/workspace/Final_project/serch.php(85): PDO->prepare('SELECT?        ...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Final_project/serch.php on line 85
+[17-Sep-2017 11:48:49 Asia/Tokyo] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/Final_project/serch.php on line 250
+[17-Sep-2017 11:50:07 Asia/Tokyo] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/Final_project/serch.php on line 251
