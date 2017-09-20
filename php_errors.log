@@ -1297,3 +1297,57 @@ Stack trace:
   thrown in /home/ubuntu/workspace/Final_project/serch.php on line 85
 [17-Sep-2017 11:48:49 Asia/Tokyo] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/Final_project/serch.php on line 250
 [17-Sep-2017 11:50:07 Asia/Tokyo] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/Final_project/serch.php on line 251
+[20-Sep-2017 23:44:03 Asia/Tokyo] PHP Notice:  Undefined variable: genre in /home/ubuntu/workspace/Final_project/g.mam.fashion.php on line 267
+[20-Sep-2017 23:44:03 Asia/Tokyo] PHP Stack trace:
+[20-Sep-2017 23:44:03 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/g.mam.fashion.php:0
+[20-Sep-2017 23:44:09 Asia/Tokyo] PHP Notice:  Undefined variable: genre in /home/ubuntu/workspace/Final_project/g.mam.fashion.php on line 267
+[20-Sep-2017 23:44:09 Asia/Tokyo] PHP Stack trace:
+[20-Sep-2017 23:44:09 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/g.mam.fashion.php:0
+[20-Sep-2017 23:44:12 Asia/Tokyo] PHP Notice:  Undefined variable: genre in /home/ubuntu/workspace/Final_project/g.mam.fashion.php on line 267
+[20-Sep-2017 23:44:12 Asia/Tokyo] PHP Stack trace:
+[20-Sep-2017 23:44:12 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/g.mam.fashion.php:0
+[20-Sep-2017 23:44:17 Asia/Tokyo] PHP Notice:  Undefined variable: genre in /home/ubuntu/workspace/Final_project/g.mam.fashion.php on line 267
+[20-Sep-2017 23:44:17 Asia/Tokyo] PHP Stack trace:
+[20-Sep-2017 23:44:17 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/g.mam.fashion.php:0
+[20-Sep-2017 23:46:38 Asia/Tokyo] PHP Notice:  Undefined variable: genre in /home/ubuntu/workspace/Final_project/g.mam.fashion.php on line 267
+[20-Sep-2017 23:46:38 Asia/Tokyo] PHP Stack trace:
+[20-Sep-2017 23:46:38 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/g.mam.fashion.php:0
+[20-Sep-2017 23:46:39 Asia/Tokyo] PHP Notice:  Undefined variable: genre in /home/ubuntu/workspace/Final_project/g.mam.fashion.php on line 267
+[20-Sep-2017 23:46:39 Asia/Tokyo] PHP Stack trace:
+[20-Sep-2017 23:46:39 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/g.mam.fashion.php:0
+[20-Sep-2017 23:46:40 Asia/Tokyo] PHP Notice:  Undefined variable: genre in /home/ubuntu/workspace/Final_project/g.mam.fashion.php on line 267
+[20-Sep-2017 23:46:40 Asia/Tokyo] PHP Stack trace:
+[20-Sep-2017 23:46:40 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/g.mam.fashion.php:0
+[20-Sep-2017 23:46:40 Asia/Tokyo] PHP Notice:  Undefined variable: genre in /home/ubuntu/workspace/Final_project/g.mam.fashion.php on line 267
+[20-Sep-2017 23:46:40 Asia/Tokyo] PHP Stack trace:
+[20-Sep-2017 23:46:40 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/g.mam.fashion.php:0
+[20-Sep-2017 23:46:45 Asia/Tokyo] PHP Notice:  Undefined variable: genre in /home/ubuntu/workspace/Final_project/g.mam.fashion.php on line 267
+[20-Sep-2017 23:46:45 Asia/Tokyo] PHP Stack trace:
+[20-Sep-2017 23:46:45 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/g.mam.fashion.php:0
+[20-Sep-2017 23:46:50 Asia/Tokyo] PHP Notice:  Undefined variable: genre in /home/ubuntu/workspace/Final_project/g.mam.fashion.php on line 267
+[20-Sep-2017 23:46:50 Asia/Tokyo] PHP Stack trace:
+[20-Sep-2017 23:46:50 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/g.mam.fashion.php:0
+[20-Sep-2017 23:47:05 Asia/Tokyo] PHP Notice:  Undefined variable: genre in /home/ubuntu/workspace/Final_project/g.mam.fashion.php on line 267
+[20-Sep-2017 23:47:05 Asia/Tokyo] PHP Stack trace:
+[20-Sep-2017 23:47:05 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/g.mam.fashion.php:0
+[20-Sep-2017 23:47:17 Asia/Tokyo] PHP Notice:  Undefined variable: genre in /home/ubuntu/workspace/Final_project/g.mam.fashion.php on line 267
+[20-Sep-2017 23:47:17 Asia/Tokyo] PHP Stack trace:
+[20-Sep-2017 23:47:17 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/g.mam.fashion.php:0
+[20-Sep-2017 23:47:27 Asia/Tokyo] PHP Notice:  Undefined variable: rows in /home/ubuntu/workspace/Final_project/serch.php on line 121
+[20-Sep-2017 23:47:27 Asia/Tokyo] PHP Stack trace:
+[20-Sep-2017 23:47:27 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/serch.php:0
+[20-Sep-2017 23:47:27 Asia/Tokyo] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/Final_project/serch.php on line 210
+[20-Sep-2017 23:47:27 Asia/Tokyo] PHP Stack trace:
+[20-Sep-2017 23:47:27 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/serch.php:0
+[20-Sep-2017 23:48:40 Asia/Tokyo] PHP Notice:  Undefined variable: genre in /home/ubuntu/workspace/Final_project/g.mam.fashion.php on line 267
+[20-Sep-2017 23:48:40 Asia/Tokyo] PHP Stack trace:
+[20-Sep-2017 23:48:40 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/g.mam.fashion.php:0
+[20-Sep-2017 23:49:56 Asia/Tokyo] PHP Notice:  Undefined variable: genre in /home/ubuntu/workspace/Final_project/g.mam.fashion.php on line 267
+[20-Sep-2017 23:49:56 Asia/Tokyo] PHP Stack trace:
+[20-Sep-2017 23:49:56 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/g.mam.fashion.php:0
+[20-Sep-2017 23:50:00 Asia/Tokyo] PHP Notice:  Undefined variable: genre in /home/ubuntu/workspace/Final_project/g.mam.fashion.php on line 267
+[20-Sep-2017 23:50:00 Asia/Tokyo] PHP Stack trace:
+[20-Sep-2017 23:50:00 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/g.mam.fashion.php:0
+[20-Sep-2017 23:50:03 Asia/Tokyo] PHP Notice:  Undefined variable: genre in /home/ubuntu/workspace/Final_project/g.mam.fashion.php on line 267
+[20-Sep-2017 23:50:03 Asia/Tokyo] PHP Stack trace:
+[20-Sep-2017 23:50:03 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/g.mam.fashion.php:0

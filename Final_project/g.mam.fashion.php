@@ -239,7 +239,7 @@ function isLogin($dbh) {
     <main>
         
         <section class="width600px">
-            <form method="get" action = "serch.php" enctype="multipart/form-data">
+            <form method="get" action = "serch.php">
                 <div class="box">
                 <div class="inner_box">
                     <p>カテゴリ　　<select name="category"></p>
@@ -264,6 +264,7 @@ function isLogin($dbh) {
                         <option value="6">グリーン系</option>
                     </select>
                 </div>
+                <input type="hidden" name="genre" value="<?php echo $genre ?>" />
                 <input type="hidden" name="sql_serch" value="insert">
                 <p class="serch_button"><button class="button2" type="submit">検索する</button></p>
             </form>

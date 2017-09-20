@@ -45,16 +45,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         if (isset($_GET['category']) === TRUE) {
             $category = trim($_GET['category']);
         } 
-        // if (is_numeric($category) === FALSE) {
-            // $err_msg[] = '数値ではありません';
-        // }
         if (isset($_GET['color']) === TRUE) {
             $color = trim($_GET['color']);
         } 
-        // if (is_numeric($color) === FALSE) {
-            // $err_msg[] = '数値ではありません';
-        // }
-        // if (count($err_msg) === 0) {
             
             // SQL文を作成（新着順にt_itemに登録した商品を全部呼び出してる）
             $sql = 'SELECT
@@ -119,7 +112,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                 $data[$i]['created_at']  = htmlspecialchars($row['created_at'],  ENT_QUOTES, 'UTF-8');
                 $i++;
             }
-        // }
     }
 }
         
