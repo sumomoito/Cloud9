@@ -175,9 +175,9 @@ die('データベースの接続に失敗しました。');
         
         </div>
         <ul>
-            <li><a href="g.mam.fashion.php">ママファション</a></li>
-            <li><a href="g.baby.kids.php">ベビー・キッズ</a></li>
-            <li><a href="g.maternity.php">マタニティ・授乳服</a></li>
+            <li><a href="search.php?genre=0">ママファション</a></li>
+            <li><a href="search.php?genre=1">ベビー・キッズ</a></li>
+            <li><a href="search.php?genre=2">マタニティ・授乳服</a></li>
         </ul>
         </div>
     </header>
