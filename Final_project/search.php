@@ -16,7 +16,7 @@ $sql_search     = '';
 $category      = '';
 $color         = '';
 $result_msg    = '';
-$genre         = '';
+$genre         = 0;
 $genre_name    = '';
 $data          = [];
 $err_msg       = [];
@@ -84,6 +84,12 @@ if (isset($_GET['genre']) === true) {
     }
 }
 
+if (isset($_GET['category']) === TRUE) {
+    $category = trim($_GET['category']);
+} 
+if (isset($_GET['color']) === TRUE) {
+    $color = trim($_GET['color']);
+}
 // SQL文を作成（新着順にt_itemに登録した商品を全部呼び出してる）
 $sql = 'SELECT
             t_item.item_id,
@@ -101,11 +107,34 @@ $sql = 'SELECT
             t_item
         WHERE
             genre = ' . $genre;
+            
+// 洋服のカテゴリを指定して検索！            
+if($category !== '') {
+    $sql .= ' AND t_item.category = :category';
+}
+// 洋服のカラーを指定して検索！            
+if($color !== '') {
+    $sql .= ' AND t_item.color = :color';
+}
+            
 $sql .= ' ORDER BY
             created_at DESC'; // 登録日時の降順(直近を上に)でソート
+            
+try {
+    // SQL文を実行する準備
+    $stmt = $dbh->prepare($sql);
+} catch(Exception $e) {
+    die('失敗しました');
+}
 
-// SQL文を実行する準備
-$stmt = $dbh->prepare($sql);
+// SQL文のプレースホルダに値をバインド
+if($category !== '') {
+    $stmt->bindValue(':category', $category);
+}
+if($color !== '') {
+    $stmt->bindValue(':color', $color);
+}
+
 // SQLを実行
 $stmt->execute();
 // レコードの取得
@@ -127,91 +156,6 @@ foreach ($rows as $row) {
     $i++;
 }
 
-
-// もしリクエストメソッドがGETだったら？？
-if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-
-    //検索処理スタート！！
-    if (isset($_GET['sql_search']) === TRUE){
-        $sql_search = $_GET['sql_search'];
-    }
-    
-    if ($sql_search === 'insert') {
-        // $categoryを初期化
-        $category = null;
-        if (isset($_GET['category']) === TRUE) {
-            $category = trim($_GET['category']);
-        } 
-        if (isset($_GET['color']) === TRUE) {
-            $color = trim($_GET['color']);
-        } 
-            
-        // SQL文を作成（新着順にt_itemに登録した商品を全部呼び出してる）
-        $sql = 'SELECT
-                    t_item.item_id,
-                    t_item.item_name,
-                    t_item.price,
-                    t_item.stock,
-                    t_item.status,
-                    t_item.genre,
-                    t_item.category,
-                    t_item.color,
-                    t_item.description,
-                    t_item.img,
-                    t_item.created_at
-                FROM 
-                    t_item
-                WHERE
-                    genre = ' . $genre;
-        // 洋服のカテゴリを指定して検索！            
-        if($category !== '') {
-            $sql .= ' AND t_item.category = :category';
-        }
-        // 洋服のカラーを指定して検索！            
-        if($color !== '') {
-            $sql .= ' AND t_item.color = :color';
-        }
-        $sql .= ' ORDER BY
-                    created_at DESC'; // 登録日時の降順(直近を上に)でソート
-                    
-        try {    
-            // SQL文を実行する準備
-            $stmt = $dbh->prepare($sql);
-        } catch(Exception $e) {
-            die('失敗しました。');
-        }
-        
-        // SQL文のプレースホルダに値をバインド
-        if($category !== '') {
-            $stmt->bindValue(':category', $category);
-        }
-        if($color !== '') {
-            $stmt->bindValue(':color', $color);
-        }
-        
-        // SQLを実行
-        $stmt->execute();
-        // レコードの取得
-        $rows = $stmt->fetchAll();
-        // 1行ずつ結果を配列で取得します
-        $i = 0;
-        foreach ($rows as $row) {
-            $data[$i]['item_id']     = htmlspecialchars($row['item_id'],     ENT_QUOTES, 'UTF-8');
-            $data[$i]['item_name']   = htmlspecialchars($row['item_name'],   ENT_QUOTES, 'UTF-8');
-            $data[$i]['price']       = htmlspecialchars($row['price'],       ENT_QUOTES, 'UTF-8');
-            $data[$i]['stock']       = htmlspecialchars($row['stock'],       ENT_QUOTES, 'UTF-8');
-            $data[$i]['status']      = htmlspecialchars($row['status'],      ENT_QUOTES, 'UTF-8');
-            $data[$i]['genre']       = htmlspecialchars($row['genre'],       ENT_QUOTES, 'UTF-8');
-            $data[$i]['category']    = htmlspecialchars($row['category'],    ENT_QUOTES, 'UTF-8');
-            $data[$i]['color']       = htmlspecialchars($row['color'],       ENT_QUOTES, 'UTF-8');
-            $data[$i]['description'] = htmlspecialchars($row['description'], ENT_QUOTES, 'UTF-8');
-            $data[$i]['img']         = htmlspecialchars($row['img'],         ENT_QUOTES, 'UTF-8');
-            $data[$i]['created_at']  = htmlspecialchars($row['created_at'],  ENT_QUOTES, 'UTF-8');
-            $i++;
-        }
-    }
-}
-
 // もしリクエストメソッドがPOSTだったら？？
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
@@ -230,7 +174,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           $err_msg[] = '数値ではありません。'; 
         }
         if (count($err_msg) === 0) {
-
             // 現在日時を取得
             $now_date = date('Y-m-d H:i:s');
             // SQL文を作成
@@ -242,7 +185,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             } catch(Exception $e) {
                 die('失敗しました。');
             }
-
             // point! $user_id はsessionから, $item_id, ($amoun) の値をフォームから受け取る処理が必要です
             // SQL文のプレースホルダに値をバインド
             $stmt->bindValue(1, $user_id,  PDO::PARAM_INT);
@@ -256,7 +198,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $result_msg = 'カートに追加しました';
         }
     }
-
     // お気に入りに追加処理スタート！！
     if (isset($_POST['sql_favorite']) === TRUE) {
       $sql_favorite = $_POST['sql_favorite'];  
@@ -272,7 +213,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           $err_msg[] = '数値ではありません。'; 
         }
         if (count($err_msg) === 0) {
-
             // 現在日時を取得
             $now_date = date('Y-m-d H:i:s');
             // SQL文を作成
@@ -284,7 +224,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             } catch(Exception $e) {
                 die('失敗しました。');
             }
-
             // point! $user_id はsessionから, $item_id, の値をフォームから受け取る処理が必要です
             // SQL文のプレースホルダに値をバインド
             $stmt->bindValue(1, $user_id,  PDO::PARAM_INT);
@@ -298,7 +237,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 }
-
 ?>
 
 

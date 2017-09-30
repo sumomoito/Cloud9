@@ -1571,3 +1571,73 @@ Stack trace:
 #0 /home/ubuntu/workspace/Final_project/search.php(103): PDO->prepare('SELECT?        ...')
 #1 {main}
   thrown in /home/ubuntu/workspace/Final_project/search.php on line 103
+[23-Sep-2017 22:22:17 Asia/Tokyo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY
+            created_at DESC' at line 16' in /home/ubuntu/workspace/Final_project/search.php:108
+Stack trace:
+#0 /home/ubuntu/workspace/Final_project/search.php(108): PDO->prepare('SELECT?        ...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Final_project/search.php on line 108
+[25-Sep-2017 18:22:06 Asia/Tokyo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY
+            created_at DESC' at line 16' in /home/ubuntu/workspace/Final_project/search.php:108
+Stack trace:
+#0 /home/ubuntu/workspace/Final_project/search.php(108): PDO->prepare('SELECT?        ...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Final_project/search.php on line 108
+[25-Sep-2017 18:22:19 Asia/Tokyo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY
+            created_at DESC' at line 16' in /home/ubuntu/workspace/Final_project/search.php:108
+Stack trace:
+#0 /home/ubuntu/workspace/Final_project/search.php(108): PDO->prepare('SELECT?        ...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Final_project/search.php on line 108
+[25-Sep-2017 18:27:08 Asia/Tokyo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY
+            created_at DESC' at line 16' in /home/ubuntu/workspace/Final_project/search.php:108
+Stack trace:
+#0 /home/ubuntu/workspace/Final_project/search.php(108): PDO->prepare('SELECT?        ...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Final_project/search.php on line 108
+[25-Sep-2017 18:27:09 Asia/Tokyo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY
+            created_at DESC' at line 16' in /home/ubuntu/workspace/Final_project/search.php:108
+Stack trace:
+#0 /home/ubuntu/workspace/Final_project/search.php(108): PDO->prepare('SELECT?        ...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Final_project/search.php on line 108
+[25-Sep-2017 18:28:16 Asia/Tokyo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY
+            created_at DESC' at line 16' in /home/ubuntu/workspace/Final_project/search.php:108
+Stack trace:
+#0 /home/ubuntu/workspace/Final_project/search.php(108): PDO->prepare('SELECT?        ...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Final_project/search.php on line 108
+[25-Sep-2017 18:28:21 Asia/Tokyo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY
+            created_at DESC' at line 16' in /home/ubuntu/workspace/Final_project/search.php:108
+Stack trace:
+#0 /home/ubuntu/workspace/Final_project/search.php(108): PDO->prepare('SELECT?        ...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Final_project/search.php on line 108
+[25-Sep-2017 18:57:05 Asia/Tokyo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY
+            created_at DESC' at line 16' in /home/ubuntu/workspace/Final_project/search.php:109
+Stack trace:
+#0 /home/ubuntu/workspace/Final_project/search.php(109): PDO->prepare('SELECT?        ...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Final_project/search.php on line 109
+[25-Sep-2017 19:01:49 Asia/Tokyo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY
+            created_at DESC' at line 16' in /home/ubuntu/workspace/Final_project/search.php:109
+Stack trace:
+#0 /home/ubuntu/workspace/Final_project/search.php(109): PDO->prepare('SELECT?        ...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Final_project/search.php on line 109
+[30-Sep-2017 12:51:20 Asia/Tokyo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY
+            created_at DESC' at line 16' in /home/ubuntu/workspace/Final_project/search.php:109
+Stack trace:
+#0 /home/ubuntu/workspace/Final_project/search.php(109): PDO->prepare('SELECT?        ...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Final_project/search.php on line 109
+[30-Sep-2017 15:48:47 Asia/Tokyo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 2031 ' in /home/ubuntu/workspace/Final_project/search.php:126
+Stack trace:
+#0 /home/ubuntu/workspace/Final_project/search.php(126): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/Final_project/search.php on line 126
+[30-Sep-2017 15:58:19 Asia/Tokyo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 2031 ' in /home/ubuntu/workspace/Final_project/search.php:130
+Stack trace:
+#0 /home/ubuntu/workspace/Final_project/search.php(130): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/Final_project/search.php on line 130
