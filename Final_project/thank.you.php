@@ -119,7 +119,7 @@ die('データベースの接続に失敗しました。');
         <h1><a href="top.php">Beautiful Mothers</a></h1>
         
             <?php
-            // ログインしてたらログアウトを表示
+            // ログインしてたらログアウトを表示(未完成)
             if (isLogin($dbh) === TRUE) { ?>
                 <p class="login.menu"><button class="button1" type="submit"><a href="login.php">ログアウト</a></button></p>
             <?php // ログインしてなければログインを表示

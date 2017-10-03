@@ -20,31 +20,9 @@ die('データベースの接続に失敗しました。');
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $dbh->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
 
-/*
-// セッション変数からログイン済みか確認
-// point! t_user に「存在するuser_idのみログイン済」と判定しましょう
-if (isset($_SESSION['user_id'])) {
-  // ログイン済みの場合、ホームページへリダイレクト
-  header('Location: top.php');
-  exit;
-}
-*/
-
-/* ！！！！！！8/29 夜　表示見るため一旦コメントアウトしてる！！！！！！
-あれ？コメントアウトしたらちゃんとエラーも出るようになった！
-しかしログイン/ログアウトの切り替えはまだ出来てないなぁ。。。
-そしてそのあと、コメントアウトしなくてもエラー出たり、トップ飛ぶようになった、どうして？
-心配なので、発表終わるまではコメントアウトしておこうかな
-if (isLogin($dbh) === TRUE) {
-    // header(); // トップページにリダイレクト
-    header('Location: top.php');
-    // exit();
-    exit;
-}
-*/
 
 
-// moriyama! errパラメータの存在確認
+// errパラメータの存在確認
 $err_msg = [];
 if (isset($_GET['err']) === true) {
     
@@ -117,7 +95,7 @@ function isLogin($dbh) {
         <h1><a href="top.php">Beautiful Mothers</a></h1>
             
             <?php
-            // ログインしてたらログアウトを表示
+            // ログインしてたらログアウトを表示(未完成)
             if (isLogin($dbh) === TRUE) { ?>
                 <p class="login.menu"><button class="button1" type="submit"><a href="logout.php">ログアウト</a></button></p>
             <?php // ログインしてなければログインを表示

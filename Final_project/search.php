@@ -256,7 +256,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <h1><a href="top.php">Beautiful Mothers</a></h1>
             
             <?php
-            // ログインしてたらログアウトを表示
+            // ログインしてたらログアウトを表示(未完成)
             if (isLogin($dbh) === TRUE) { ?>
                 <p class="login.menu"><button class="button1" type="submit"><a href="login.php">ログアウト</a></button></p>
             <?php // ログインしてなければログインを表示
@@ -325,7 +325,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <li class="flex_box_item">
 <?php foreach ($data as $value) { ?>
                 <?php if(isset($value['genre'])) { ?>
-                    <?php // 一旦アウト if($value['genre'] === '0') { ?>
                     <dl class="dl_height">
                         <dt class="dt_margin"><img class="img_size" src="<?php print $img_dir . $value['img']; ?>"></dt>
                         <dd class="dd_margin name_font"><?php print $value['item_name']; ?></dd>
@@ -344,7 +343,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </dd>
                     </dl>
                     <?php  } ?>
-                <?php // 一旦アウト } ?>    
 <?php } ?>
                 </li>
             </ul>
