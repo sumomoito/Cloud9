@@ -1641,3 +1641,104 @@ Stack trace:
 #0 /home/ubuntu/workspace/Final_project/search.php(130): PDOStatement->execute()
 #1 {main}
   thrown in /home/ubuntu/workspace/Final_project/search.php on line 130
+[04-Oct-2017 02:20:06 Asia/Tokyo] PHP Notice:  Undefined variable: value in /home/ubuntu/workspace/Final_project/thank.you.php on line 219
+[04-Oct-2017 02:20:06 Asia/Tokyo] PHP Stack trace:
+[04-Oct-2017 02:20:06 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/thank.you.php:0
+[04-Oct-2017 02:24:13 Asia/Tokyo] PHP Notice:  Undefined variable: user_id in /home/ubuntu/workspace/Final_project/thank.you.php on line 84
+[04-Oct-2017 02:24:13 Asia/Tokyo] PHP Stack trace:
+[04-Oct-2017 02:24:13 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/thank.you.php:0
+[04-Oct-2017 02:24:56 Asia/Tokyo] PHP Notice:  Undefined variable: value in /home/ubuntu/workspace/Final_project/thank.you.php on line 219
+[04-Oct-2017 02:24:56 Asia/Tokyo] PHP Stack trace:
+[04-Oct-2017 02:24:56 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/thank.you.php:0
+[04-Oct-2017 02:25:46 Asia/Tokyo] PHP Notice:  Undefined variable: value in /home/ubuntu/workspace/Final_project/thank.you.php on line 219
+[04-Oct-2017 02:25:46 Asia/Tokyo] PHP Stack trace:
+[04-Oct-2017 02:25:46 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/thank.you.php:0
+[04-Oct-2017 02:26:09 Asia/Tokyo] PHP Notice:  Undefined variable: value in /home/ubuntu/workspace/Final_project/thank.you.php on line 219
+[04-Oct-2017 02:26:09 Asia/Tokyo] PHP Stack trace:
+[04-Oct-2017 02:26:09 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/thank.you.php:0
+[04-Oct-2017 02:26:19 Asia/Tokyo] PHP Notice:  Undefined variable: value in /home/ubuntu/workspace/Final_project/thank.you.php on line 219
+[04-Oct-2017 02:26:19 Asia/Tokyo] PHP Stack trace:
+[04-Oct-2017 02:26:19 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/thank.you.php:0
+[04-Oct-2017 02:27:10 Asia/Tokyo] PHP Notice:  Undefined variable: value in /home/ubuntu/workspace/Final_project/thank.you.php on line 219
+[04-Oct-2017 02:27:10 Asia/Tokyo] PHP Stack trace:
+[04-Oct-2017 02:27:10 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/thank.you.php:0
+[04-Oct-2017 02:27:15 Asia/Tokyo] PHP Notice:  Undefined variable: value in /home/ubuntu/workspace/Final_project/thank.you.php on line 219
+[04-Oct-2017 02:27:15 Asia/Tokyo] PHP Stack trace:
+[04-Oct-2017 02:27:15 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/thank.you.php:0
+[04-Oct-2017 02:28:27 Asia/Tokyo] PHP Notice:  Undefined variable: value in /home/ubuntu/workspace/Final_project/thank.you.php on line 219
+[04-Oct-2017 02:28:27 Asia/Tokyo] PHP Stack trace:
+[04-Oct-2017 02:28:27 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/thank.you.php:0
+[04-Oct-2017 02:49:48 Asia/Tokyo] PHP Fatal error:  Call to undefined function isLogin() in /home/ubuntu/workspace/Final_project/top.php on line 221
+[04-Oct-2017 02:49:48 Asia/Tokyo] PHP Stack trace:
+[04-Oct-2017 02:49:48 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/top.php:0
+[04-Oct-2017 06:45:31 Asia/Tokyo] PHP Notice:  Undefined variable: value in /home/ubuntu/workspace/Final_project/thank.you.php on line 219
+[04-Oct-2017 06:45:31 Asia/Tokyo] PHP Stack trace:
+[04-Oct-2017 06:45:31 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/thank.you.php:0
+[04-Oct-2017 08:55:22 Asia/Tokyo] PHP Fatal error:  Call to undefined function isLogin() in /home/ubuntu/workspace/Final_project/login.php on line 106
+[04-Oct-2017 08:55:22 Asia/Tokyo] PHP Stack trace:
+[04-Oct-2017 08:55:22 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/login.php:0
+[04-Oct-2017 09:06:59 Asia/Tokyo] PHP Parse error:  syntax error, unexpected ''user_name)) { ?>' (T_ENCAPSED_AND_WHITESPACE), expecting ']' in /home/ubuntu/workspace/Final_project/login.php on line 106
+[04-Oct-2017 10:38:19 Asia/Tokyo] PHP Notice:  Undefined variable: value in /home/ubuntu/workspace/Final_project/thank.you.php on line 220
+[04-Oct-2017 10:38:19 Asia/Tokyo] PHP Stack trace:
+[04-Oct-2017 10:38:19 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/thank.you.php:0
+[04-Oct-2017 10:44:10 Asia/Tokyo] PHP Notice:  Undefined variable: value in /home/ubuntu/workspace/Final_project/thank.you.php on line 220
+[04-Oct-2017 10:44:10 Asia/Tokyo] PHP Stack trace:
+[04-Oct-2017 10:44:10 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/thank.you.php:0
+[04-Oct-2017 10:44:13 Asia/Tokyo] PHP Notice:  Undefined variable: value in /home/ubuntu/workspace/Final_project/thank.you.php on line 220
+[04-Oct-2017 10:44:13 Asia/Tokyo] PHP Stack trace:
+[04-Oct-2017 10:44:13 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/thank.you.php:0
+[04-Oct-2017 10:44:16 Asia/Tokyo] PHP Notice:  Undefined variable: value in /home/ubuntu/workspace/Final_project/cart.php on line 236
+[04-Oct-2017 10:44:16 Asia/Tokyo] PHP Stack trace:
+[04-Oct-2017 10:44:16 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[04-Oct-2017 10:47:34 Asia/Tokyo] PHP Notice:  Undefined variable: value in /home/ubuntu/workspace/Final_project/thank.you.php on line 220
+[04-Oct-2017 10:47:34 Asia/Tokyo] PHP Stack trace:
+[04-Oct-2017 10:47:34 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/thank.you.php:0
+[04-Oct-2017 11:09:46 Asia/Tokyo] PHP Notice:  Undefined variable: amount in /home/ubuntu/workspace/Final_project/thank.you.php on line 96
+[04-Oct-2017 11:09:46 Asia/Tokyo] PHP Stack trace:
+[04-Oct-2017 11:09:46 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/thank.you.php:0
+[04-Oct-2017 11:09:46 Asia/Tokyo] PHP Notice:  Undefined variable: value in /home/ubuntu/workspace/Final_project/thank.you.php on line 242
+[04-Oct-2017 11:09:46 Asia/Tokyo] PHP Stack trace:
+[04-Oct-2017 11:09:46 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/thank.you.php:0
+[04-Oct-2017 11:14:40 Asia/Tokyo] PHP Notice:  Undefined variable: value in /home/ubuntu/workspace/Final_project/cart.php on line 236
+[04-Oct-2017 11:14:40 Asia/Tokyo] PHP Stack trace:
+[04-Oct-2017 11:14:40 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[04-Oct-2017 11:14:43 Asia/Tokyo] PHP Notice:  Undefined index: cart_id in /home/ubuntu/workspace/Final_project/thank.you.php on line 152
+[04-Oct-2017 11:14:43 Asia/Tokyo] PHP Stack trace:
+[04-Oct-2017 11:14:43 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/thank.you.php:0
+[04-Oct-2017 11:55:41 Asia/Tokyo] PHP Notice:  Undefined variable: value in /home/ubuntu/workspace/Final_project/cart.php on line 236
+[04-Oct-2017 11:55:41 Asia/Tokyo] PHP Stack trace:
+[04-Oct-2017 11:55:41 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[04-Oct-2017 11:55:54 Asia/Tokyo] PHP Notice:  Undefined index: cart_id in /home/ubuntu/workspace/Final_project/thank.you.php on line 152
+[04-Oct-2017 11:55:54 Asia/Tokyo] PHP Stack trace:
+[04-Oct-2017 11:55:54 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/thank.you.php:0
+[04-Oct-2017 11:55:54 Asia/Tokyo] PHP Notice:  Undefined index: cart_id in /home/ubuntu/workspace/Final_project/thank.you.php on line 152
+[04-Oct-2017 11:55:54 Asia/Tokyo] PHP Stack trace:
+[04-Oct-2017 11:55:54 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/thank.you.php:0
+[04-Oct-2017 11:59:15 Asia/Tokyo] PHP Notice:  Undefined variable: value in /home/ubuntu/workspace/Final_project/cart.php on line 236
+[04-Oct-2017 11:59:15 Asia/Tokyo] PHP Stack trace:
+[04-Oct-2017 11:59:15 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[04-Oct-2017 11:59:45 Asia/Tokyo] PHP Notice:  Undefined variable: value in /home/ubuntu/workspace/Final_project/cart.php on line 236
+[04-Oct-2017 11:59:45 Asia/Tokyo] PHP Stack trace:
+[04-Oct-2017 11:59:45 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[04-Oct-2017 12:06:17 Asia/Tokyo] PHP Notice:  Undefined variable: value in /home/ubuntu/workspace/Final_project/cart.php on line 236
+[04-Oct-2017 12:06:17 Asia/Tokyo] PHP Stack trace:
+[04-Oct-2017 12:06:17 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[04-Oct-2017 12:06:35 Asia/Tokyo] PHP Notice:  Undefined variable: value in /home/ubuntu/workspace/Final_project/thank.you.php on line 180
+[04-Oct-2017 12:06:35 Asia/Tokyo] PHP Stack trace:
+[04-Oct-2017 12:06:35 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/thank.you.php:0
+[04-Oct-2017 12:10:53 Asia/Tokyo] PHP Notice:  Undefined variable: value in /home/ubuntu/workspace/Final_project/thank.you.php on line 225
+[04-Oct-2017 12:10:53 Asia/Tokyo] PHP Stack trace:
+[04-Oct-2017 12:10:53 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/thank.you.php:0
+[04-Oct-2017 12:12:42 Asia/Tokyo] PHP Notice:  Undefined variable: value in /home/ubuntu/workspace/Final_project/cart.php on line 236
+[04-Oct-2017 12:12:42 Asia/Tokyo] PHP Stack trace:
+[04-Oct-2017 12:12:42 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[04-Oct-2017 12:13:03 Asia/Tokyo] PHP Notice:  Undefined variable: value in /home/ubuntu/workspace/Final_project/thank.you.php on line 225
+[04-Oct-2017 12:13:03 Asia/Tokyo] PHP Stack trace:
+[04-Oct-2017 12:13:03 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/thank.you.php:0
+[04-Oct-2017 12:18:04 Asia/Tokyo] PHP Notice:  session_start(): ps_files_cleanup_dir: opendir(/var/lib/php5) failed: Permission denied (13) in /home/ubuntu/workspace/Final_project/favorite.php on line 32
+[04-Oct-2017 12:18:04 Asia/Tokyo] PHP Stack trace:
+[04-Oct-2017 12:18:04 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/favorite.php:0
+[04-Oct-2017 12:18:04 Asia/Tokyo] PHP   2. session_start() /home/ubuntu/workspace/Final_project/favorite.php:32
+[04-Oct-2017 12:18:12 Asia/Tokyo] PHP Notice:  Undefined variable: value in /home/ubuntu/workspace/Final_project/cart.php on line 236
+[04-Oct-2017 12:18:12 Asia/Tokyo] PHP Stack trace:
+[04-Oct-2017 12:18:12 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0

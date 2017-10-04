@@ -8,8 +8,6 @@ $charset  = 'utf8';   // データベースの文字コード
 // MySQL用のDSN文字列(DSNはデータソースネームの略)
 $dsn = 'mysql:dbname='.$dbname.';host='.$host.';charset='.$charset;
 
-// セッション開始
-session_start();
 
 try {
     // データベースに接続
@@ -37,6 +35,19 @@ if (isset($_GET['err']) === true) {
     }
 }
 
+/* 考え中...
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    
+    // セッション開始
+    session_start();
+    
+    // POST値取得
+    $user_name = get_post_data('user_name'); // ユーザー名
+    $passwd    = get_post_data('passwd');    // パスワード
+    // ユーザー名をCookieへ保存
+    setcookie('user_name', $user_name, time() + 60 * 60 * 24 * 365);
+
+}
 
 function isLogin($dbh) {
     if (empty($_SESSION['user_id'])) {
@@ -62,12 +73,12 @@ function isLogin($dbh) {
     // レコードの取得
     $rows = $stmt->fetchAll();
                 
-    /*
+
      if ($_SESSION['user_id']が有効なIDであることを確認) {
         // 無効IDだった時の処理
         return false;
      }
-     */
+
     if (empty($rows)) {
         return false;
     }     
@@ -75,6 +86,7 @@ function isLogin($dbh) {
     // ここのタイミングではログイン済みと判定
     return true;
 }
+*/
 
 ?>
 
@@ -96,7 +108,7 @@ function isLogin($dbh) {
             
             <?php
             // ログインしてたらログアウトを表示(未完成)
-            if (isLogin($dbh) === TRUE) { ?>
+             if (isset($_COOKIE['user_name'])) { ?>
                 <p class="login.menu"><button class="button1" type="submit"><a href="logout.php">ログアウト</a></button></p>
             <?php // ログインしてなければログインを表示
             } else { ?>

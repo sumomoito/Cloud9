@@ -31,6 +31,21 @@ die('データベースの接続に失敗しました。');
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $dbh->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
 
+if (isset($_COOKIE['user_name'])) {
+    $user_name = $_COOKIE['user_name'];
+} else {
+    $user_name = '';
+}
+
+/*
+// ユーザ名を取得できたか確認
+if (isset($_SESSION['user_id'])) {
+  $user_id = $_SESSION['user_id'];
+} else {
+  // ユーザ名が取得できない場合、ログアウト処理へリダイレクト
+  //header('Location: logout.php');
+  //exit;
+}
 
 function isLogin($dbh) {
     if (empty($_SESSION['user_id'])) {
@@ -61,8 +76,7 @@ function isLogin($dbh) {
     // ここのタイミングではログイン済みと判定
     return true;
 }
-
-
+*/
     
     // もしリクエストメソッドがPOSTだったら？？
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -210,7 +224,7 @@ function isLogin($dbh) {
             
             <?php
             // ログインしてたらログアウトを表示(未完成)
-            if (isLogin($dbh) === TRUE) { ?>
+            if (isset($_SESSION['user_id'])) { ?>
                 <p class="login.menu"><button class="button1" type="submit"><a href="login.php">ログアウト</a></button></p>
             <?php // ログインしてなければログインを表示
             } else { ?>

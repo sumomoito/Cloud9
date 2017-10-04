@@ -122,7 +122,7 @@ die('データベースの接続に失敗しました。');
             }
         }
         
-        // カートから削除処理スタート！！
+        // お気に入りから削除処理スタート！！
         if (isset($_POST['sql_delete']) === TRUE) {
             $sql_delete = $_POST['sql_delete'];
         }
