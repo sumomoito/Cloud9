@@ -1742,3 +1742,42 @@ Stack trace:
 [04-Oct-2017 12:18:12 Asia/Tokyo] PHP Notice:  Undefined variable: value in /home/ubuntu/workspace/Final_project/cart.php on line 236
 [04-Oct-2017 12:18:12 Asia/Tokyo] PHP Stack trace:
 [04-Oct-2017 12:18:12 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[04-Oct-2017 14:19:24 Asia/Tokyo] PHP Notice:  Undefined variable: value in /home/ubuntu/workspace/Final_project/cart.php on line 236
+[04-Oct-2017 14:19:25 Asia/Tokyo] PHP Stack trace:
+[04-Oct-2017 14:19:25 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[04-Oct-2017 14:19:34 Asia/Tokyo] PHP Notice:  Undefined variable: value in /home/ubuntu/workspace/Final_project/cart.php on line 236
+[04-Oct-2017 14:19:34 Asia/Tokyo] PHP Stack trace:
+[04-Oct-2017 14:19:34 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[05-Oct-2017 13:15:20 Asia/Tokyo] PHP Notice:  Undefined variable: value in /home/ubuntu/workspace/Final_project/cart.php on line 236
+[05-Oct-2017 13:15:20 Asia/Tokyo] PHP Stack trace:
+[05-Oct-2017 13:15:20 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[05-Oct-2017 13:16:11 Asia/Tokyo] PHP Notice:  Undefined variable: value in /home/ubuntu/workspace/Final_project/thank.you.php on line 246
+[05-Oct-2017 13:16:11 Asia/Tokyo] PHP Stack trace:
+[05-Oct-2017 13:16:11 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/thank.you.php:0
+[05-Oct-2017 13:16:14 Asia/Tokyo] PHP Notice:  Undefined variable: value in /home/ubuntu/workspace/Final_project/cart.php on line 236
+[05-Oct-2017 13:16:14 Asia/Tokyo] PHP Stack trace:
+[05-Oct-2017 13:16:14 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[05-Oct-2017 13:16:17 Asia/Tokyo] PHP Notice:  Undefined variable: value in /home/ubuntu/workspace/Final_project/thank.you.php on line 246
+[05-Oct-2017 13:16:17 Asia/Tokyo] PHP Stack trace:
+[05-Oct-2017 13:16:17 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/thank.you.php:0
+[05-Oct-2017 13:16:27 Asia/Tokyo] PHP Notice:  Undefined variable: value in /home/ubuntu/workspace/Final_project/cart.php on line 236
+[05-Oct-2017 13:16:27 Asia/Tokyo] PHP Stack trace:
+[05-Oct-2017 13:16:27 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[05-Oct-2017 13:16:54 Asia/Tokyo] PHP Notice:  Undefined variable: value in /home/ubuntu/workspace/Final_project/cart.php on line 236
+[05-Oct-2017 13:16:54 Asia/Tokyo] PHP Stack trace:
+[05-Oct-2017 13:16:54 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[05-Oct-2017 13:18:42 Asia/Tokyo] PHP Notice:  Undefined variable: value in /home/ubuntu/workspace/Final_project/cart.php on line 236
+[05-Oct-2017 13:18:42 Asia/Tokyo] PHP Stack trace:
+[05-Oct-2017 13:18:42 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[05-Oct-2017 13:18:43 Asia/Tokyo] PHP Notice:  Undefined variable: value in /home/ubuntu/workspace/Final_project/thank.you.php on line 226
+[05-Oct-2017 13:18:43 Asia/Tokyo] PHP Stack trace:
+[05-Oct-2017 13:18:43 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/thank.you.php:0
+[05-Oct-2017 13:18:45 Asia/Tokyo] PHP Notice:  Undefined variable: value in /home/ubuntu/workspace/Final_project/cart.php on line 236
+[05-Oct-2017 13:18:45 Asia/Tokyo] PHP Stack trace:
+[05-Oct-2017 13:18:45 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0
+[05-Oct-2017 13:18:57 Asia/Tokyo] PHP Notice:  Undefined variable: value in /home/ubuntu/workspace/Final_project/thank.you.php on line 226
+[05-Oct-2017 13:18:57 Asia/Tokyo] PHP Stack trace:
+[05-Oct-2017 13:18:57 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/thank.you.php:0
+[05-Oct-2017 13:19:00 Asia/Tokyo] PHP Notice:  Undefined variable: value in /home/ubuntu/workspace/Final_project/cart.php on line 236
+[05-Oct-2017 13:19:00 Asia/Tokyo] PHP Stack trace:
+[05-Oct-2017 13:19:00 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Final_project/cart.php:0

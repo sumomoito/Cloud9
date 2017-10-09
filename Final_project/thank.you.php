@@ -1,4 +1,5 @@
 <?php
+// 10/4 thank.you.php gitに上げるため一旦内容戻した
 // MySQL接続情報
 $host     = 'localhost';
 $username = 'sumo'; // MySQLのユーザ名
