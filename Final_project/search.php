@@ -12,16 +12,17 @@ $img_dir = './img/';
 
 $sql_kind     = '';
 $sql_favorite = '';
-$sql_search     = '';
-$category      = '';
-$color         = '';
-$result_msg    = '';
-$genre         = 0;
-$genre_name    = '';
-$data          = [];
-$err_msg       = [];
-$amount        = 1;
-$user_id       = 1;
+$sql_search   = '';
+$category     = '';
+$color        = '';
+$price        = '';
+$result_msg   = '';
+$genre        = 0;
+$genre_name   = '';
+$data         = [];
+$err_msg      = [];
+$amount       = 1;
+$user_id      = 1;
 
 try {
     // データベースに接続
@@ -90,6 +91,9 @@ if (isset($_GET['category']) === TRUE) {
 if (isset($_GET['color']) === TRUE) {
     $color = trim($_GET['color']);
 }
+if (isset($_GET['price']) === TRUE) {
+    $price = trim($_GET['price']);
+}
 // SQL文を作成（新着順にt_itemに登録した商品を全部呼び出してる）
 $sql = 'SELECT
             t_item.item_id,
@@ -116,7 +120,10 @@ if($category !== '') {
 if($color !== '') {
     $sql .= ' AND t_item.color = :color';
 }
-            
+// 洋服の値段を指定して検索！ 
+if($price !== '') {
+    $sql .= ' AND t_item.price <= :price';
+}            
 $sql .= ' ORDER BY
             created_at DESC'; // 登録日時の降順(直近を上に)でソート
             
@@ -133,6 +140,9 @@ if($category !== '') {
 }
 if($color !== '') {
     $stmt->bindValue(':color', $color);
+}
+if($price !== '') {
+    $stmt->bindValue(':price', $price);
 }
 
 // SQLを実行
@@ -295,7 +305,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <option value="5">インナー</option>
                         <option value="6">その他</option>
                     </select>
-<?php // 一旦保留   <p><label>　価格　　　<input type="text" name="min_price" value=""></label>円　<label>〜　<input type="text" name="max_price" value=""></label>円</p> ?>
                     <p>カラー別　　<select name="color"></p>
                         <option value="">選択してください</option>
                         <option value="0">ホワイト系</option>
@@ -306,6 +315,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <option value="5">イエロー系</option>
                         <option value="6">グリーン系</option>
                     </select>
+                    <p><label>価　　格　　<input type="text" name="price" value=""></label>　円以下　(半角英数字)</p>
                 </div>
                 <input type="hidden" name="genre" value="<?php echo $genre ?>">
                 <input type="hidden" name="sql_search" value="insert">
